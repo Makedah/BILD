@@ -23,6 +23,6 @@ bildApp.config(['$routeProvider',
         templateUrl: 'partials/contactus.html'
       }).
       otherwise({
-        redirectTo: '/home.html'
+        redirectTo: '/'
       });
   }]);
