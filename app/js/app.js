@@ -13,10 +13,16 @@ var bildApp = angular.module('bildApp', [
 bildApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/projects', {
-        templateUrl: 'partials/projects.html'
+      when('/', {
+        templateUrl: 'partials/home.html'
+      }).
+      when('/corporations', {
+        templateUrl: 'partials/corporations.html'
+      }).
+      when('/contactus', {
+        templateUrl: 'partials/contactus.html'
       }).
       otherwise({
-        redirectTo: '/index.html'
+        redirectTo: '/home.html'
       });
   }]);
