@@ -1,7 +1,7 @@
-<h3 class="search-results">Number of small businesses in the database</h3>
 <div ng-controller="SearchCtrl" class="search-filters">
+	<h3 class="search-results">{{companiesCount}} small businesses found in the database</h3>
 	<div class="col-md-3">
-		<h4>Filters</h4>
+		<h4 class="title">Filters</h4>
 		<label for="NAICS">NAICS Code</label>
 		<select class="long-field-select" name="naicscode" ng-model="filter.NAICS">
 			<option value="11 Agriculture, Forestry, Fishing, and Hunting">11   Agriculture, Forestry, Fishing, and Hunting</option>
@@ -222,12 +222,12 @@
 		</select>
 	</div>
 	<div class="col-md-6">
-		<h4>Results</h4>
+		<h4 class="title">Results</h4>
 		<div class="col-md-4">
-			<input type="text" class="form-control" placeholder="Trade Speciality" ng-model="filter.tradeSpecialty">
+			<input type="text" class="form-control" placeholder="Trade Specialty" ng-model="filter.tradeSpecialty">
 		</div>
 	    <div class="col-md-4">
-			<input type="text" class="form-control" placeholder="Location" ng-model="filter.location">	
+			<input type="text" class="form-control" placeholder="Address, City, Zip" ng-model="filter.location">	
 		</div>
 		<div class="col-md-4">
 			<input type="text" class="form-control" placeholder="Mile Radius" ng-model="filter.mileRadius">
@@ -235,9 +235,30 @@
 		<div id="btn-row">
 			<button type="submit" class="btn btn-primary" id="search-btn">SEARCH</button>
 		</div>
+
+		<table class="table">
+			<thead>
+		        <tr>
+		            <th>Company Name</th>
+		            <th>Address</th>
+		            <th>City</th>
+		            <th>Zipcode</th>
+		            <th>District</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr ng-repeat="company in companies">
+		            <td><span ng-bind="company.name"></span></td>
+		            <td><span ng-bind="company.address"></span></td>
+		            <td><span ng-bind="company.city"></span></td>
+		            <td><span ng-bind="company.zipcode"></td>
+		            <td><span ng-bind="company.district"></td>
+		        </tr>
+		    </tbody>
+		</table>
 	</div>
 	<div class="col-md-3 do-next-options">
-		<h4>What Do You Want to Do Next?</h4>
+		<h4 class="title">What Do You Want to Do Next?</h4>
 		<div class="button-group">
 			<button type="submit" class="btn btn-primary search-btn">Send Email Blast</button></br>
 			<button type="submit" class="btn btn-primary search-btn">Send Invitation to Bid</button></br>

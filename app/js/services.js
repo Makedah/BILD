@@ -12,6 +12,14 @@ bildServices.factory('Projects', ['$resource',
   }
 ]);
 
+bildServices.factory('Companies', ['$resource',
+  function($resource){
+    return $resource('data/companies.json', {}, {
+      query: {method:'GET', isArray:true}
+    });
+  }
+]);
+
 bildServices.factory('NewProjectService', 
 	function() {
 		var project = {};

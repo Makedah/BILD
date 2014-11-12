@@ -27,7 +27,7 @@
 	            <th>Project Name</th>
 	            <th>Value $</th>
 	            <th>Created At</th>
-	            <th>SBE/DBE Goal %</th>
+	            <th>SBE/DBE Goal</th>
 	        </tr>
 	    </thead>
 	    <tbody>
@@ -35,7 +35,7 @@
 	            <td><span ng-bind="project.name"></span></td>
 	            <td><span ng-bind="project.value"></span></td>
 	            <td><span ng-bind="project.createdAt"></span></td>
-	            <td><span ng-bind="project.goalPercentage"></span></td>
+	            <td><div class="bar" style="width: {{project.goalPercentage}}%">{{project.goalPercentage}}%</div></td>
 	        </tr>
 	    </tbody>
 	</table>

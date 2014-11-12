@@ -63,8 +63,11 @@ bildControllers.controller('ProjectPreviewCtrl', ['$scope', 'NewProjectService',
     }
 ]);
 
-bildControllers.controller('SearchCtrl', ['$scope', 
-  function($scope) {
-    
+bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
+  function($scope, Companies) {
+    $scope.companies = Companies.query();
+    $scope.companies.$promise.then(function(data) {
+       $scope.companiesCount = data.length;
+    });
   }
 ]);

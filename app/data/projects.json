@@ -33,7 +33,7 @@
 		"bidValue" : 70000,
 		"duration" : 11,
 		"durationUnits" : "months",
-		"goalPercentage" : 10,
+		"goalPercentage" : 30,
 		"contact" : {
 			"managerName" : "Ann Galt",
 			"managerPhone" : "6508880001",
