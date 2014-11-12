@@ -147,6 +147,22 @@ body {
   }
 }
 
+/* Projects */
+.welcome {
+  padding-left: 30px;
+}
+
+.user-buttons {
+  text-align: center;
+}
+
+.nav-tabs {
+  padding-left: 20px;
+}
+
+.projects-list {
+  padding-left: 30px;
+}
 
 /* Footer */
 .footer {

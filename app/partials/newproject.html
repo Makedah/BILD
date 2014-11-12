@@ -67,12 +67,20 @@
 	    	<input type="text" class="form-control" placeholder="Zipcode" ng-model="project.location.zipcode">
 		</div>
 		<div class="col-md-7">
-		    <label for="projectName">Overall Project Value ($)</label>
-		    <input type="number" class="form-control" placeholder="Project Value" ng-model="project.value">
+		    <label for="projectName">Overall Project Value</label>
+		    <div class="input-group">
+			    <span class="input-group-addon">$</span>
+			    <input type="number" class="form-control" placeholder="Project Value" ng-model="project.value">
+			    <span class="input-group-addon">.00</span>
+			</div>
 		</div>
 		<div class="col-md-7">
-		    <label for="projectName">Bid Project Value ($) </label>
-		    <input type="number" class="form-control" placeholder="Bid Project Value" ng-model="project.bidValue">
+		    <label for="projectName">Bid Project Value</label>
+		    <div class="input-group">
+			    <span class="input-group-addon">$</span>
+			    <input type="number" class="form-control" placeholder="Bid Project Value" ng-model="project.bidValue">
+			    <span class="input-group-addon">.00</span>
+			</div>
 		</div>
 		<div class="col-md-7">
 		    <label for="projectName">Project Duration</label>
@@ -83,8 +91,11 @@
 		    </select>
 		</div>
 		<div class="col-md-7">
-		    <label for="projectName">SBE/DBE Goal (%)</label>
-		    <input type="number" class="form-control" ng-model="project.goalPercentage" placeholder="0-100">
+		    <label for="projectName">SBE/DBE Goal</label>
+		    <div class="input-group">
+			    <input type="number" class="form-control" ng-model="project.goalPercentage" placeholder="0-100">
+			    <span class="input-group-addon">%</span>
+			</div>
 		</div>
 		<div class="col-md-7">
 		    <label for="projectName">Company Contact Information</label>

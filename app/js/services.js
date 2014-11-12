@@ -27,6 +27,6 @@ bildServices.factory('NewProjectService',
 	    return {
 		    set: setProject,
 		    get: getProject
-	  	};
+	  	}
 	}
 );

@@ -1,14 +1,46 @@
-<h2>Welcome, User!</h2>
-<h3>Project List</h3>
-<div class="col-md-12">
+<div class="welcome">
+	<h2>Welcome, User!</h2>
+	<h3>Connect with over # small businesses within our system<h3>
+</div>
+<div class="col-md-12 user-buttons">
  	<p class="trial-button">
  		<a class="btn btn-lg btn-primary" href="#createnew" role="button">Create New Project</a>
  		<a class="btn btn-lg btn-primary" href="#search" role="button">Search</a>
  	</p>
 </div>
-<div ng-controller="ProjectsCtrl">
-	<div ng-repeat="project in projects">
-		<div class="col-md-12">
+
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#projects">Projects</a></li>
+  <li role="presentation"><a href="#">People</a></li>
+  <li role="presentation"><a href="#profile">Profile</a></li>
+  <li role="presentation"><a href="#">Settings</a></li>
+  <li role="presentation"><a href="#messages">Messages</a></li>
+</ul>
+
+<div ng-controller="ProjectsCtrl" class="projects-list">
+	<h2>Total Number of Projects: {{projectsCount}}</h2>
+	<h2>Total Value of Projects: $ {{projectsValue}}.00</h2>
+
+	<table class="table table-bordered">
+		<thead>
+	        <tr>
+	            <th>Project Name</th>
+	            <th>Value $</th>
+	            <th>Created At</th>
+	            <th>SBE/DBE Goal %</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="project in projects" ng-click="setSelected();">
+	            <td><span ng-bind="project.name"></span></td>
+	            <td><span ng-bind="project.value"></span></td>
+	            <td><span ng-bind="project.createdAt"></span></td>
+	            <td><span ng-bind="project.goalPercentage"></span></td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+		<!-- <div class="col-md-12">
 			<div class="col-md-12">
 			    <label for="projectName">Project Name: </label>
 			    <span ng-bind="project.name"></span>
@@ -46,6 +78,7 @@
 			    Manager Phone #: <span ng-bind="project.contact.managerPhone"></span></br>
 			    Manager Email: <span ng-bind="project.contact.managerEmail"></span>
 			</div>
-		</div>
-	</div>
-</div>
+		</div> -->
+	
+
+

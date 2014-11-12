@@ -17,7 +17,8 @@
 			"managerName" : "John Galt",
 			"managerPhone" : "",
 			"managerEmail": "john@example.com"
-		}
+		},
+		"createdAt" : "2014-11-01T21:35:43+0000"
 	},
 	{
 		"id" : "test-project-2",
@@ -37,6 +38,7 @@
 			"managerName" : "Ann Galt",
 			"managerPhone" : "6508880001",
 			"managerEmail": "ann@gmail.com"
-		}
+		},
+		"createdAt" : "2014-11-11T01:10:05+0000"
 	}
 ]
