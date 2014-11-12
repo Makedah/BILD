@@ -9,10 +9,6 @@
 html, body, .view-container { height: 100%; }
 body > .view-container { height: auto; min-height: 100%; }
 
-.view-frame {
-  /*padding-bottom: 3em; */
-}
-
 #logo > img {
   height: 50px;
   margin-top: -15px;
@@ -47,6 +43,7 @@ h1 {
 }
 
 /* Corporations */
+
 .img-responsive {
   display: block;
   max-width: 100%;
@@ -162,6 +159,54 @@ body {
 
 .projects-list {
   padding-left: 30px;
+}
+
+.table {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+td:hover {
+    cursor: pointer;
+}
+
+#project-edit-buttons {
+  margin-left: 10px;
+}
+
+.project-edit-btn {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* Search */
+
+.search-results {
+  margin-left: 20px;
+}
+
+.search-filters {
+  margin-left: 10px;
+}
+
+.long-field-select {
+  width: 275px;
+}
+
+.do-next-options {
+  text-align: center;
+}
+.search-btn {
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+#btn-row {
+  text-align: center;
+}
+
+#search-btn {
+  margin-top: 10px;
 }
 
 /* Footer */

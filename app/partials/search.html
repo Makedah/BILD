@@ -1,1 +1,248 @@
-<h1>Search</h1>
+<h3 class="search-results">Number of small businesses in the database</h3>
+<div ng-controller="SearchCtrl" class="search-filters">
+	<div class="col-md-3">
+		<h4>Filters</h4>
+		<label for="NAICS">NAICS Code</label>
+		<select class="long-field-select" name="naicscode" ng-model="filter.NAICS">
+			<option value="11 Agriculture, Forestry, Fishing, and Hunting">11   Agriculture, Forestry, Fishing, and Hunting</option>
+			<option value="21 Mining">21   Mining</option>
+			<option value="22 Utilities">22   Utilities</option>
+			<option value="23 Construction">23   Construction</option>
+			<option value="31 Manufacturing">31   Manufacturing</option>
+			<option value="32 Manufacturing">32   Manufacturing</option>
+			<option value="33 Manufacturing">33   Manufacturing</option>
+			<option value="42 Wholesale Trade">42   Wholesale Trade</option>
+			<option value="44 Retail Trade">44   Retail Trade</option>
+			<option value="45 Retail Trade">45   Retail Trade</option>
+			<option value="48 Transportation and Warehousing">48   Transportation and Warehousing</option>
+			<option value="49 Transportation and Warehousing">49   Transportation and Warehousing</option>
+			<option value="51 Information">51   Information</option>
+			<option value="52 Finance and Insurance">52   Finance and Insurance</option>
+			<option value="53 Real Estate and Rental and Leasing">53   Real Estate and Rental and Leasing</option>
+			<option value="54 Professional, Scientific, and Technical Services">54   Professional, Scientific, and Technical Services</option>
+			<option value="55 Management of Companies and Enterprises">55   Management of Companies and Enterprises</option>
+			<option value="56 Admin, Support, Waste Mgt and Remediation Services">56   Admin, Support, Waste Mgt and Remediation Services</option>
+			<option value="61 Educational Services">61   Educational Services</option>
+			<option value="62 Health Care and Social Assistance">62   Health Care and Social Assistance</option>
+			<option value="71 Arts, Entertainment, and Recreation">71   Arts, Entertainment, and Recreation</option>
+			<option value="72 Accomodation and Food Services">72   Accomodation and Food Services</option>
+			<option value="81 Other Services (except Public Administration)">81   Other Services (except Public Administration)</option>
+			<option value="92 Public Administration">92   Public Administration</option>
+			<option value="99 Airport Concessionaires">99   Airport Concessionaires</option>
+		</select>
+		<label for="SIC">SIC Code</label>
+		<input type="text" class="form-control" placeholder="SIC Code" ng-model="filter.SIC">
+		<label for="certificate">Agency Certificate</label>
+		<input type="text" class="form-control" placeholder="Agency Certificate" ng-model="filter.certificate">
+		<label for="certificationType">Certification Type</label>
+		<select name="certificationType" ng-model="filter.certificationType">
+		    <option value="type1">Certification Type 1</option>	
+		    <option value="type2">Certification Type 2</option>	
+		    <option value="type3">Certification Type 3</option>	
+		</select>
+		</br>
+		<label for="companySize">Company Size</label>
+		<select name="companySize" ng-model="filter.companySize">
+		    <option value="size1">&le;1000</option>	
+		    <option value="size2">&le;10000</option>	
+		    <option value="size3">&le;100000</option>	
+		    <option value="size4">&le;1000000</option>
+		    <option value="size5">1000000+</option>
+		</select>
+		</br>
+		<label for="companyValuation">Company Valuation</label>
+		<select name="companyValuation" ng-model="filter.companyValuation">
+		    <option value="size1">&le;1000</option>	
+		    <option value="size2">&le;10000</option>	
+		    <option value="size3">&le;100000</option>	
+		    <option value="size4">&le;1000000</option>
+		    <option value="size5">1000000+</option>
+		</select>
+		</br>
+		<label for="insurance">Insurance</label>
+		<select name="insurance" ng-model="filter.insurance">
+		    <option value="size1">&le;10000</option>	
+		    <option value="size2">&le;100000</option>	
+		    <option value="size3">&le;1000000</option>	
+		    <option value="size4">1000000+</option>
+		</select>
+		</br>
+		<label for="bonding">Bonding</label>
+		<select name="bonding" ng-model="filter.bonding">
+		    <option value="size1">&le;10000</option>	
+		    <option value="size2">&le;100000</option>	
+		    <option value="size3">&le;1000000</option>	
+		    <option value="size4">1000000+</option>
+		</select>
+		</br>
+		<label for="license">Lincese Type</label>
+		<select class="long-field-select" name="licensetype" ng-model="filter.licensetype">
+			<option value="A   General Engineering Contractor">A General Engineering Contractor</option>
+			<option value="ARC Architect">ARC Architect</option>
+			<option value="ASB Asbestos">ASB Asbestos</option>
+			<option value="B   General Building Contractor">B General Building Contractor</option>
+			<option value="C02 Insulation and Accoustical Contractor">C02 Insulation and Accoustical Contractor</option>
+			<option value="C04 Boilder, Hot-Water Heating System Fitting Contractor">C04 Boilder, Hot-Water Heating System Fitting Contractor</option>
+			<option value="C05 Framing and Rough Carpentry Contractor">C05 Framing and Rough Carpentry Contractor</option>
+			<option value="C06 Cabinet, Millwork and Finish Carpentry Contractor">C06 Cabinet, Millwork and Finish Carpentry Contractor</option>
+			<option value="C07 Low Voltage Systems Contractor">C07 Low Voltage Systems Contractor</option>
+			<option value="C08 Concrete Contractor">C08 Concrete Contractor</option>
+			<option value="C09 Drywall Contractor">C09 Drywall Contractor</option>
+			<option value="C10 Electrical Contractor">C10 Electrical Contractor</option>
+			<option value="C11 Elevator Contractor">C11 Elevator Contractor</option>
+			<option value="C12 Earthwork and Paving Contractor">C12 Earthwork and Paving Contractor</option>
+			<option value="C13 Fencing Contractor">C13 Fencing Contractor</option>
+			<option value="C15 Flooring and Floor Covering Contractor">C15 Flooring and Floor Covering Contractor</option>
+			<option value="C16 Fire Protection Contractor">C16 Fire Protection Contractor</option>
+			<option value="C17 Glazing Contractor">C17 Glazing Contractor</option>
+			<option value="C20 Warm-Air Heating, Ventilation and Air-conditioning Contracto">C20 Warm-Air Heating, Ventilation and Air-conditioning Contracto</option>
+			<option value="C21 Building Moving / Demolition Contractor">C21 Building Moving / Demolition Contractor</option>
+			<option value="C23 Ornamental Metal Contractor">C23 Ornamental Metal Contractor</option>
+			<option value="C27 Landscaping Contractor">C27 Landscaping Contractor</option>
+			<option value="C28 Lock and Security Equipment Contractor">C28 Lock and Security Equipment Contractor</option>
+			<option value="C29 Masonry Contractor">C29 Masonry Contractor</option>
+			<option value="C31 Construction Zone Traffic Control Contractor">C31 Construction Zone Traffic Control Contractor</option>
+			<option value="C32 Parking and Highway Improvement Contractor">C32 Parking and Highway Improvement Contractor</option>
+			<option value="C33 Painting and Decorating Contractor">C33 Painting and Decorating Contractor</option>
+			<option value="C34 Pipeline Contractor">C34 Pipeline Contractor</option>
+			<option value="C35 Lathing and Plastering Contractor">C35 Lathing and Plastering Contractor</option>
+			<option value="C36 Plumbing Contractor">C36 Plumbing Contractor</option>
+			<option value="C38 Refrigeration Contractor">C38 Refrigeration Contractor</option>
+			<option value="C39 Roofing Contractor">C39 Roofing Contractor</option>
+			<option value="C42 Sanitation System Contractor">C42 Sanitation System Contractor</option>
+			<option value="C43 Sheet Metal Contractor">C43 Sheet Metal Contractor</option>
+			<option value="C45 Electrical Sign Contractor">C45 Electrical Sign Contractor</option>
+			<option value="C46 Solar Contractor">C46 Solar Contractor</option>
+			<option value="C47 General Manufactured Housing Contractor">C47 General Manufactured Housing Contractor</option>
+			<option value="C50 Reinforcing Steel Contractor">C50 Reinforcing Steel Contractor</option>
+			<option value="C51 Structural Steel Contractor">C51 Structural Steel Contractor</option>
+			<option value="C53 Swimming Pool Contractor">C53 Swimming Pool Contractor</option>
+			<option value="C54 Tile Contractor (Ceramic and Mosaic)">C54 Tile Contractor (Ceramic and Mosaic)</option>
+			<option value="C55 Water Conditioning Contractor">C55 Water Conditioning Contractor</option>
+			<option value="C57 Well Drilling Contractor">C57 Well Drilling Contractor</option>
+			<option value="C60 Welding Contractor">C60 Welding Contractor</option>
+			<option value="C61 Limited Specialty Contractor">C61 Limited Specialty Contractor</option>
+			<option value="CPA Certified Public Accountant">CPA Certified Public Accountant</option>
+			<option value="CR  Court Reporters">CR  Court Reporters</option>
+			<option value="D03 Awnings">D03 Awnings</option>
+			<option value="D04 Central Vacuum Systems">D04 Central Vacuum Systems</option>
+			<option value="D06 Concrete Related Services">D06 Concrete Related Services</option>
+			<option value="D08 Doors and Door Services">D08 Doors and Door Services</option>
+			<option value="D09 Drilling, Blasting and Oil Field Work">D09 Drilling, Blasting and Oil Field Work</option>
+			<option value="D10 Elevated Floors">D10 Elevated Floors</option>
+			<option value="D12 Synthetic Products">D12 Synthetic Products</option>
+			<option value="D16 Hardware, Locks and Safes">D16 Hardware, Locks and Safes</option>
+			<option value="D21 Machinery and Pumps">D21 Machinery and Pumps</option>
+			<option value="D22 Marble">D22 Marble</option>
+			<option value="D24 Metal Products">D24 Metal Products</option>
+			<option value="D28 Doors, Gates and Activating Devices">D28 Doors, Gates and Activating Devices</option>
+			<option value="D29 Paperhanging">D29 Paperhanging</option>
+			<option value="D30 Pile Driving / Pressure Foundation Jacking">D30 Pile Driving / Pressure Foundation Jacking</option>
+			<option value="D31 Pole Installation and Maintenance">D31 Pole Installation and Maintenance</option>
+			<option value="D34 Prefabricated Equipment">D34 Prefabricated Equipment</option>
+			<option value="D35 Pool and Spa Maintenance">D35 Pool and Spa Maintenance</option>
+			<option value="D38 Sand and Water Blasting">D38 Sand and Water Blasting</option>
+			<option value="D39 Scaffolding">D39 Scaffolding</option>
+			<option value="D40 Service Station Equipment and Maintenance">D40 Service Station Equipment and Maintenance</option>
+			<option value="D41 Siding and Decking">D41 Siding and Decking</option>
+			<option value="D42 Sign Installation">D42 Sign Installation</option>
+			<option value="D49 Tree Service">D49 Tree Service</option>
+			<option value="D50 Suspended Ceilings">D50 Suspended Ceilings</option>
+			<option value="D51 Waterproofing and Weatherproofing">D51 Waterproofing and Weatherproofing</option>
+			<option value="D52 Window Coverings">D52 Window Coverings</option>
+			<option value="D53 Wood Tanks">D53 Wood Tanks</option>
+			<option value="D56 Trenching">D56 Trenching</option>
+			<option value="D59 Hydroseed Spraying">D59 Hydroseed Spraying</option>
+			<option value="D62 Air and Water Balancing">D62 Air and Water Balancing</option>
+			<option value="D63 Construction Cleanup">D63 Construction Cleanup</option>
+			<option value="D64 Nonspecialized">D64 Nonspecialized</option>
+			<option value="D65 Weatherization and Energy Conservation">D65 Weatherization and Energy Conservation</option>
+			<option value="EAG Agricultural Engineer">EAG Agricultural Engineer</option>
+			<option value="EC  Civil Engineer">EC  Civil Engineer</option>
+			<option value="ECH Chemical Engineer">ECH Chemical Engineer</option>
+			<option value="ECS Control Systems Engineer">ECS Control Systems Engineer</option>
+			<option value="EE  Electrical Engineer ">EE  Electrical Engineer </option>
+			<option value="EFP Fire Protection Engineer">EFP Fire Protection Engineer</option>
+			<option value="EG  Geophysical Engineer">EG  Geophysical Engineer</option>
+			<option value="EGT Geotechnical Engineer">EGT Geotechnical Engineer</option>
+			<option value="EM  Mechanical Engineer ">EM  Mechanical Engineer </option>
+			<option value="EME Metallurgical Engineer">EME Metallurgical Engineer</option>
+			<option value="EMF Manufacturing Engineer">EMF Manufacturing Engineer</option>
+			<option value="EN  Nuclear Engineer">EN  Nuclear Engineer</option>
+			<option value="EP  Petroleum Engineer">EP  Petroleum Engineer</option>
+			<option value="ES  Soils Engineer">ES  Soils Engineer</option>
+			<option value="EST Structural Engineer">EST Structural Engineer</option>
+			<option value="ET  Traffic Engineer">ET  Traffic Engineer</option>
+			<option value="HAZ Hazardous Waste">HAZ Hazardous Waste</option>
+			<option value="HIC Home Improvement Certification">HIC Home Improvement Certification</option>
+			<option value="IA  Insurance Agent">IA  Insurance Agent</option>
+			<option value="IB  Insurance Broker">IB  Insurance Broker</option>
+			<option value="L   Lawyer">L   Lawyer</option>
+			<option value="LA  Landscape Architect">LA  Landscape Architect</option>
+			<option value="LS  Land Surveyor">LS  Land Surveyor</option>
+			<option value="NL  CAUTION:FIRM NOT LICENSED IN CALIFORNIA">NL  CAUTION:FIRM NOT LICENSED IN CALIFORNIA</option>
+			<option value="PC  PEST CONTROL">PC  PEST CONTROL</option>
+			<option value="PI  Private Investigator">PI  Private Investigator</option>
+			<option value="RE  Real Estate Broker/Agents">RE  Real Estate Broker/Agents</option>
+			<option value="RG  Registered Geologist">RG  Registered Geologist</option>
+			<option value="SCB Securities and Commodities Broker">SCB Securities and Commodities Broker</option>
+			<option value="SP  Security Patrol">SP  Security Patrol</option>
+			<option value="TCS Traffic Control Supervisor">TCS Traffic Control Supervisor</option>
+			<option value="TCT Traffic Control Technician">TCT Traffic Control Technician</option>
+		</select>
+		</br>
+		<label for="ethnicity">Ethnicity</label>
+		<select name="ethnicity" ng-model="filter.ethnicity">
+			<option value="ASIAN PAC">Asian Pacific</option>
+            <option value="ASIAN SUB">Asian Subcontinent</option>
+            <option value="BLACK">Black</option>
+            <option value="CAUC">Caucasian</option>
+            <option value="HISPANIC">Hispanic</option>
+            <option value="NAT AM">Native American</option>
+            <option value="OTHER">Other</option>
+        </select>
+    	</br>
+        <label for="gender">Gender</label>
+		<select name="gender" ng-model="filter.gender">
+		    <option value="male">Male</option>	
+		    <option value="female">Female</option>	
+		</select>
+		</br>
+		<label for="LGBT">LGBT</label>
+		<select name="LGBT" ng-model="filter.LGBT">
+		    <option value="yes">Yes</option>	
+		    <option value="no">No</option>	
+		</select>
+		</br>
+		<label for="veteran">Veteran</label>
+		<select name="veteran" ng-model="filter.veteran">
+			<option value="disabled-veteran">Disabled Veteran</option>	
+		    <option value="veteran">Veteran</option>	
+		    <option value="non-veteran">Non Veteran</option>
+		</select>
+	</div>
+	<div class="col-md-6">
+		<h4>Results</h4>
+		<div class="col-md-4">
+			<input type="text" class="form-control" placeholder="Trade Speciality" ng-model="filter.tradeSpecialty">
+		</div>
+	    <div class="col-md-4">
+			<input type="text" class="form-control" placeholder="Location" ng-model="filter.location">	
+		</div>
+		<div class="col-md-4">
+			<input type="text" class="form-control" placeholder="Mile Radius" ng-model="filter.mileRadius">
+		</div>
+		<div id="btn-row">
+			<button type="submit" class="btn btn-primary" id="search-btn">SEARCH</button>
+		</div>
+	</div>
+	<div class="col-md-3 do-next-options">
+		<h4>What Do You Want to Do Next?</h4>
+		<div class="button-group">
+			<button type="submit" class="btn btn-primary search-btn">Send Email Blast</button></br>
+			<button type="submit" class="btn btn-primary search-btn">Send Invitation to Bid</button></br>
+			<button type="submit" class="btn btn-primary search-btn">Run Reports</button></br>
+			<button type="submit" class="btn btn-primary search-btn">Schedule Webinar</button></br>
+		</div>
+	</div>
+</div>

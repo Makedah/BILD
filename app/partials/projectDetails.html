@@ -1,4 +1,4 @@
-<h3>Project Details</h3>
+<h3 class="welcome">Project Details</h3>
 <div class="col-md-12" ng-controller="ProjectDetailsCtrl">
 	<div class="col-md-12">
 	    <label for="projectName">Project Name: </label>
@@ -36,5 +36,9 @@
 	    Manager Name: <span ng-bind="project.contact.managerName"></span></br>
 	    Manager Phone #: <span ng-bind="project.contact.managerPhone"></span></br>
 	    Manager Email: <span ng-bind="project.contact.managerEmail"></span>
+	</div>
+	<div class="button-group" id="project-edit-buttons">
+		<button type="submit" class="btn btn-primary project-edit-btn">EDIT</button>
+		<button type="submit" class="btn btn-primary project-edit-btn">DELETE</button>
 	</div>
 </div>

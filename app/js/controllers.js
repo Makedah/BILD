@@ -50,7 +50,7 @@ bildControllers.controller('NewProjectCtrl', ['$scope', 'NewProjectService',
 bildControllers.controller('ProjectPreviewCtrl', ['$scope', 'NewProjectService',
   function($scope, NewProjectService) {
       $scope.project = NewProjectService.get();
-      
+
       $scope.publish = function() {
         console.log('save into json -> display json on the projects page');
         window.location.href = '/app/#/projects';
@@ -61,4 +61,10 @@ bildControllers.controller('ProjectPreviewCtrl', ['$scope', 'NewProjectService',
       }
       
     }
+]);
+
+bildControllers.controller('SearchCtrl', ['$scope', 
+  function($scope) {
+    
+  }
 ]);

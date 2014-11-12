@@ -1,7 +1,7 @@
 [
 	{
 		"id" : "test-project-1",
-		"name" : "test project",
+		"name" : "test project 1",
 		"bidPackageName" : "test bid package name",
 		"location" : {
 			"city" : "San Francisco",
@@ -40,5 +40,26 @@
 			"managerEmail": "ann@gmail.com"
 		},
 		"createdAt" : "2014-11-11T01:10:05+0000"
+	},
+	{
+		"id" : "test-project-3",
+		"name" : "test project 3",
+		"bidPackageName" : "test bid package name",
+		"location" : {
+			"city" : "San Francisco",
+			"state" : "California",
+			"zipcode" : "94102"
+		},
+		"value" : 50000,
+		"bidValue" : 5000,
+		"duration" : 1,
+		"durationUnits" : "years",
+		"goalPercentage" : 20,
+		"contact" : {
+			"managerName" : "Ann Smith",
+			"managerPhone" : "6508880001",
+			"managerEmail": "asmith@gmail.com"
+		},
+		"createdAt" : "2014-11-12T01:31:07+0000"
 	}
 ]
