@@ -1,0 +1,42 @@
+[
+	{
+		"id" : "test-project-1",
+		"name" : "test project",
+		"bidPackageName" : "test bid package name",
+		"location" : {
+			"city" : "San Francisco",
+			"state" : "California",
+			"zipcode" : "94102"
+		},
+		"value" : 1000000,
+		"bidValue" : 90000,
+		"duration" : 4,
+		"durationUnits" : "years",
+		"goalPercentage" : 15,
+		"contact" : {
+			"managerName" : "John Galt",
+			"managerPhone" : "",
+			"managerEmail": "john@example.com"
+		}
+	},
+	{
+		"id" : "test-project-2",
+		"name" : "test project 2",
+		"bidPackageName" : "test bid package name",
+		"location" : {
+			"city" : "San Mateo",
+			"state" : "California",
+			"zipcode" : "94002"
+		},
+		"value" : 800000,
+		"bidValue" : 70000,
+		"duration" : 11,
+		"durationUnits" : "months",
+		"goalPercentage" : 10,
+		"contact" : {
+			"managerName" : "Ann Galt",
+			"managerPhone" : "6508880001",
+			"managerEmail": "ann@gmail.com"
+		}
+	}
+]

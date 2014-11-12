@@ -1,5 +1,5 @@
 <h3>Project Preview</h3>
-<div ng-controller="NewProjectPreviewCtrl">
+<div ng-controller="ProjectPreviewCtrl">
 	<div class="col-md-12">
 		<div class="col-md-12">
 		    <label for="projectName">Project Name: </label>
@@ -39,5 +39,6 @@
 		    Manager Email: <span ng-bind="project.contact.managerEmail"></span>
 		</div>
 		<button type="submit" class="btn btn-primary" id="publish-btn" ng-click="publish(project)">PUBLISH</button>
+		<button type="submit" class="btn btn-primary" id="cancel-btn" ng-click="cancel()">CANCEL</button>
 	</div>
 </div>
