@@ -1,44 +1,45 @@
 <h3 class="welcome">Project Details</h3>
-<div class="col-md-12" ng-controller="ProjectDetailsCtrl">
-	<div class="col-md-12">
-	    <label for="projectName">Project Name: </label>
-	    <span ng-bind="project.name"></span>
+<div ng-controller="ProjectDetailsCtrl">
+	<div class="col-md-3">
+		<img href="#">
 	</div>
-	<div class="col-md-12">
-	    <label for="projectName">Project Bid Package Name: </label>
-	    <span ng-bind="project.bidPackageName"></span>
-	</div>
-	<div class="col-md-12">
+	<div class="col-md-3">
+		<label for="projectName">Name: </label>
+	    <span ng-bind="project.name"></span></br>
+	    <label for="projectName">Bid Package Name: </label>
+	    <span ng-bind="project.bidPackageName"></span></br>
 	    <label for="projectName">Project Location: </label>
 	    <span ng-bind="project.location.city"></span>
 	    <span ng-bind="project.location.state"></span>
 	    <span ng-bind="project.location.zipcode"></span>
 	</div>
-	<div class="col-md-12">
-	    <label for="projectName">Overall Project Value: </label>
+	<div class="col-md-3">
+		<label for="projectName">Overall Project Value: </label>
 	    $ <span ng-bind="project.value"></span>.00
-	</div>
-	<div class="col-md-12">
 	    <label for="projectName">Bid Project Value: </label>
 	    $ <span ng-bind="project.bidValue"></span>.00
-	</div>
-	<div class="col-md-12">
 	    <label for="projectName">Project Duration: </label>
 	    <span ng-bind="project.duration"></span>
 	    <span ng-bind="project.durationUnits"></span>
 	</div>
-	<div class="col-md-12">
-	    <label for="projectName">SBE/DBE Goal: </label>
+	<div class="col-md-3">
+		<label for="projectName">SBE/DBE Goal: </label>
 	    <span ng-bind="project.goalPercentage"></span> %
-	</div>
-	<div class="col-md-12">
-	    <label for="projectName">Company Contact Information:</label></br>
+	    <label for="projectName">Company Contact Information</label></br>
 	    Manager Name: <span ng-bind="project.contact.managerName"></span></br>
 	    Manager Phone #: <span ng-bind="project.contact.managerPhone"></span></br>
 	    Manager Email: <span ng-bind="project.contact.managerEmail"></span>
 	</div>
-	<div class="button-group" id="project-edit-buttons">
-		<button type="submit" class="btn btn-primary project-edit-btn">EDIT</button>
-		<button type="submit" class="btn btn-primary project-edit-btn">DELETE</button>
-	</div>
+	
+	<ul class="nav nav-tabs" role="tablist">
+	  <li role="presentation" class="active"><a ui-sref="tasks">Tasks</a></li>
+	  <li role="presentation"><a ui-sref="bids">Bids</a></li>
+	  <li role="presentation"><a ui-sref="messages">Messages</a></li>
+	  <li role="presentation"><a ui-sref="media">Media</a></li>
+	  <li role="presentation"><a ui-sref="library">Library</a></li>
+	</ul>
+    <div ui-view></div>
 </div>
+
+
+

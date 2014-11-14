@@ -4,6 +4,7 @@
 
 var bildApp = angular.module('bildApp', [
   'ngRoute',
+  'ui.router',
   'bildAnimations',
   'bildControllers',
   'bildFilters',
@@ -48,3 +49,22 @@ bildApp.config(['$routeProvider',
         redirectTo: '/'
       });
   }]);
+
+bildApp.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+    .state('tasks', {
+      templateUrl: "partials/projectDetails/tasks.html"
+    })
+    .state('bids', {
+      templateUrl: "partials/projectDetails/bids.html"
+    })
+    .state('messages', {
+      templateUrl: "partials/projectDetails/messages.html"
+    })
+    .state('media', {
+      templateUrl: "partials/projectDetails/media.html"
+    })
+    .state('library', {
+      templateUrl: "partials/projectDetails/library.html"
+    })
+});
