@@ -132,6 +132,42 @@ body {
   color: white;
 }
 
+.navbar-login {
+  display: -webkit-box;
+  float: right;
+  padding-top: 5px;
+}
+
+#divide-bar {
+  color: white;
+  padding-top: 14px;
+}
+
+.img-logo {
+  height: 40px;
+  margin-top: 5px;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: white;
+  background-color: orange;
+}
+
+.dropdown-menu {
+  background-color: orange;
+  text-align: center;
+}
+
+.dropdown-menu > li > a {
+  color: white;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: orange;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 

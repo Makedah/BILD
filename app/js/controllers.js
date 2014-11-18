@@ -113,3 +113,11 @@ bildControllers.controller('CorporationsCtrl', ['$scope',
     });
   }
 ]);
+
+bildControllers.controller('UserCtrl', ['$scope',
+  function($scope) {
+     $scope.user = {}; //undefined;
+     $scope.user.name = 'Apple';
+     $scope.user.logo = 'img/Apple-Logo-black.png';
+  }
+]);
