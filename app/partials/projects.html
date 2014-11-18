@@ -1,45 +1,51 @@
-<div class="welcome">
-	<h2>Welcome, User!</h2>
-	<h3>Connect with over # small businesses within our system<h3>
+<div ng-controller="UserCtrl">
+	<div class="welcome" ng-if="user !== undefined">
+		<h2>Welcome, {{user.name}}!</h2>
+		<h3>Connect with over # small businesses within our system<h3>
+	</div>
+	<div class="col-md-12 user-buttons">
+	 	<p class="trial-button">
+	 		<a class="btn btn-lg btn-primary" href="#createnew" role="button">Create New Project</a>
+	 		<a class="btn btn-lg btn-primary" href="#search" role="button">Search</a>
+	 	</p>
+	</div>
 </div>
-<div class="col-md-12 user-buttons">
- 	<p class="trial-button">
- 		<a class="btn btn-lg btn-primary" href="#createnew" role="button">Create New Project</a>
- 		<a class="btn btn-lg btn-primary" href="#search" role="button">Search</a>
- 	</p>
+<hr class="featurette-divider">
+<div class="col-md-2">
+	<ul class="nav nav-stacked" role="tablist">
+	  <li role="presentation" class="active"><a href="#projects">Projects</a></li>
+	  <li role="presentation"><a href="#">Users</a></li>
+	  <li role="presentation"><a href="#messages">Messages</a></li>
+	</ul>
 </div>
+<div class="col-md-7">
+	<div ng-controller="ProjectsCtrl" class="projects-list">
+		<h2>Total Number of Projects: {{projectsCount}}</h2>
+		<h2>Total Value of Projects: $ {{projectsValue}}.00</h2>
 
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#projects">Projects</a></li>
-  <li role="presentation"><a href="#">Users</a></li>
-  <li role="presentation"><a href="#profile">Profile</a></li>
-  <li role="presentation"><a href="#messages">Messages</a></li>
-</ul>
-
-<div ng-controller="ProjectsCtrl" class="projects-list">
-	<h2>Total Number of Projects: {{projectsCount}}</h2>
-	<h2>Total Value of Projects: $ {{projectsValue}}.00</h2>
-
-	<table class="table table-bordered">
-		<thead>
-	        <tr>
-	            <th>Project Name</th>
-	            <th>Value $</th>
-	            <th>Created At</th>
-	            <th>SBE/DBE Goal</th>
-	        </tr>
-	    </thead>
-	    <tbody>
-	        <tr ng-repeat="project in projects" ng-click="setSelected();">
-	            <td><span ng-bind="project.name"></span></td>
-	            <td><span ng-bind="project.value"></span></td>
-	            <td><span ng-bind="project.createdAt"></span></td>
-	            <td><div class="bar" style="width: {{project.goalPercentage}}%">{{project.goalPercentage}}%</div></td>
-	        </tr>
-	    </tbody>
-	</table>
-</div>
-		
+		<table class="table table-bordered">
+			<thead>
+		        <tr>
+		            <th>Project Name</th>
+		            <th>Value $</th>
+		            <th>Created At</th>
+		            <th>SBE/DBE Goal</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr ng-repeat="project in projects" ng-click="setSelected();">
+		            <td><span ng-bind="project.name"></span></td>
+		            <td><span ng-bind="project.value"></span></td>
+		            <td><span ng-bind="project.createdAt"></span></td>
+		            <td><div class="bar" style="width: {{project.goalPercentage}}%">{{project.goalPercentage}}%</div></td>
+		        </tr>
+		    </tbody>
+		</table>
+	</div>
+</div>	
+<div class="col-md-3">
+	Right Hand Side
+</div>	
 	
 
 

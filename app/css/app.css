@@ -218,8 +218,23 @@ body {
 }
 
 /* Projects */
+
 .welcome {
   padding-left: 30px;
+}
+
+/* Navigation Menu */
+
+.nav-stacked > li {
+  border-color: gray;
+  border-style: solid;
+  border-width: thin;
+}
+.nav-stacked > li.active {
+  background-color: orange;
+}
+.nav-stacked > li > a {
+  color: black;
 }
 
 .user-buttons {
