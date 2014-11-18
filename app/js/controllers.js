@@ -77,18 +77,19 @@ bildControllers.controller('CorporationsCtrl', ['$scope',
     $(document).ready(function() {
 
       var showChar = 200;
-      var ellipsestext = "...";
+      var ellipsestext = "";
       var moretext = "more";
       var lesstext = "less";
 
       $('.more').each(function() {
         var content = $(this).html();
-        var br = content.split('</br>');
+        var br = content.split('<br>',1).toString();
+        showChar = br.length;
 
         if(content.length > showChar) {
 
           var c = content.substr(0, showChar);
-          var h = content.substr(showChar-1, content.length - showChar);
+          var h = content.substr(showChar, content.length - showChar);
 
           var html = c + '<span class="moreelipses">'+ellipsestext+'</span>&nbsp;<span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">'+moretext+'</a></span>';
 
