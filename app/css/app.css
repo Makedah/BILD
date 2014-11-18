@@ -60,6 +60,14 @@ hr {
   margin: 80px 0;
 }
 
+.subtitle {
+  text-shadow: 2px 2px 0px black;
+}
+
+.morecontent span {
+  display: none;
+}
+
 /* Carousel */
 /* GLOBAL STYLES
 -------------------------------------------------- */
