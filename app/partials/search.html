@@ -32,47 +32,49 @@
 		</select>
 		<label for="SIC">SIC Code</label>
 		<input type="text" class="form-control" placeholder="SIC Code" ng-model="filter.SIC">
-		<label for="certificate">Agency Certificate</label>
-		<input type="text" class="form-control" placeholder="Agency Certificate" ng-model="filter.certificate">
+		<label for="certifiyingAgency">Certifying Agency</label>
+		<select name="certifiyingAgency" ng-model="filter.certifiyingAgency">
+			<option value="agency1">Small Business Administration</option>
+			<option value="agency2">Department of Transportation (DOT)</option>
+			<option value="agency3">Department of General Services (DGS)</option>
+			<option value="agency4">California Public Utilities Commission</option>
+			<option value="agency5">National Minority Supplier Diversity Council (NMSDC)</option>
+			<option value="agency6">Women's Business Enterprise National Council (WBENC)</option>
+			<option value="agency7">National Association of Women Business Owner's Corp. (NAWBO)</option>
+			<option value="agency8">National Veteran Small Business Coalition (NVSBC)</option>
+		</select>
 		<label for="certificationType">Certification Type</label>
 		<select name="certificationType" ng-model="filter.certificationType">
-		    <option value="type1">Certification Type 1</option>	
-		    <option value="type2">Certification Type 2</option>	
-		    <option value="type3">Certification Type 3</option>	
+		    <option value="type1">SBA 8(a) Certification</option>	
+		    <option value="type2">Disadvantaged Business Enterprise</option>	
+		    <option value="type3">Small Business Enterprise</option>
+		    <option value="type4">Women-Owned Business Enterprise</option>
+		    <option value="type5">Disabled Veteran Business Enterprise</option>
+		    <option value="type6">Minority Owned Business Enterprise</option>	
 		</select>
 		</br>
 		<label for="companySize">Company Size</label>
 		<select name="companySize" ng-model="filter.companySize">
-		    <option value="size1">&le;1000</option>	
-		    <option value="size2">&le;10000</option>	
-		    <option value="size3">&le;100000</option>	
-		    <option value="size4">&le;1000000</option>
-		    <option value="size5">1000000+</option>
+		    <option value="size1">1-10 employees</option>	
+		    <option value="size2">11-50 employees</option>	
+		    <option value="size3">50-250 employees</option>	
+		    <option value="size4">251-500 employees</option>
+		    <option value="size5">500+ employees</option>
 		</select>
 		</br>
-		<label for="companyValuation">Company Valuation</label>
+		<label for="companyValuation">Company Revenues</label>
 		<select name="companyValuation" ng-model="filter.companyValuation">
-		    <option value="size1">&le;1000</option>	
-		    <option value="size2">&le;10000</option>	
-		    <option value="size3">&le;100000</option>	
-		    <option value="size4">&le;1000000</option>
-		    <option value="size5">1000000+</option>
+		    
 		</select>
 		</br>
 		<label for="insurance">Insurance</label>
 		<select name="insurance" ng-model="filter.insurance">
-		    <option value="size1">&le;10000</option>	
-		    <option value="size2">&le;100000</option>	
-		    <option value="size3">&le;1000000</option>	
-		    <option value="size4">1000000+</option>
+		   
 		</select>
 		</br>
 		<label for="bonding">Bonding</label>
 		<select name="bonding" ng-model="filter.bonding">
-		    <option value="size1">&le;10000</option>	
-		    <option value="size2">&le;100000</option>	
-		    <option value="size3">&le;1000000</option>	
-		    <option value="size4">1000000+</option>
+		    
 		</select>
 		</br>
 		<label for="license">Lincese Type</label>
