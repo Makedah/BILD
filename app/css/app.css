@@ -318,6 +318,10 @@ td:hover {
   display: inline-table;
 }
 
+.table-input-row {
+  width: 200px;
+}
+
 /* Search */
 .title {
   text-align: center;

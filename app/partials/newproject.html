@@ -6,8 +6,34 @@
 		    <input type="text" class="form-control" placeholder="Project Name" ng-model="project.name" required>
 		</div>
 		<div class="col-md-7">
-		    <label for="projectName">Project Bid Package Name</label>
-		    <input type="text" class="form-control" placeholder="Project Bid Package Name" ng-model="project.bidPackageName">
+		    <label for="projectValue">Project Value</label>
+		    <div class="input-group">
+			    <span class="input-group-addon">$</span>
+			    <input type="number" class="form-control" placeholder="Project Value" ng-model="project.value">
+			    <span class="input-group-addon">.00</span>
+			</div>
+		</div>
+		<div class="col-md-7">
+		    <label for="projectBidPackages">Project Bid Packages</label>
+		    <table>
+				<tr>
+					<th class="table-input-row">Name</th>
+					<th class="table-input-row">Value</th>
+				</tr>
+				<tr ng-repeat="bidPackage in project.bidPackages">
+				  <td><span ng-bind="bidPackage.name" required></span></td>
+				  <td>$<span ng-bind="bidPackage.value" required></span></td>
+				</tr>
+			</table>
+		    <table>
+				<tr>
+				  <td><input ng-model="bidPackage.name" class="table-input-row"></td>
+				  <td><input ng-model="bidPackage.value" class="table-input-row"></td>
+				</tr>
+				<td colspan="2">
+					<input type="Button" value="Add New Bid Package" ng-click="addPackage(bidPackage)">
+				</td>
+			</table>
 		</div>
 		<div class="col-md-7">
 		    <label for="projectName">Project Location</label>
@@ -65,14 +91,6 @@
 		    	<option value="WY">Wyoming</option>
 		    </select>
 	    	<input type="text" class="form-control" placeholder="Zipcode" ng-model="project.location.zipcode">
-		</div>
-		<div class="col-md-7">
-		    <label for="projectName">Overall Project Value</label>
-		    <div class="input-group">
-			    <span class="input-group-addon">$</span>
-			    <input type="number" class="form-control" placeholder="Project Value" ng-model="project.value">
-			    <span class="input-group-addon">.00</span>
-			</div>
 		</div>
 		<div class="col-md-7">
 		    <label for="projectName">Bid Project Value</label>

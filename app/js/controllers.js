@@ -31,7 +31,6 @@ bildControllers.controller('ProjectsCtrl', ['$scope', 'Projects', 'NewProjectSer
 bildControllers.controller('ProjectDetailsCtrl', ['$scope', 'NewProjectService',
   function($scope, NewProjectService) {
     $scope.project = NewProjectService.get();
-
     $scope.bidPackagesCount = 0;
     if ($scope.project.bidPackages != undefined) {
       $scope.bidPackagesCount = $scope.project.bidPackages.length;
@@ -43,7 +42,16 @@ bildControllers.controller('ProjectDetailsCtrl', ['$scope', 'NewProjectService',
 bildControllers.controller('NewProjectCtrl', ['$scope', 'NewProjectService',
   function($scope, NewProjectService) {
     $scope.project = NewProjectService.get();
-    
+    $scope.project.bidPackages = [];
+
+    $scope.addPackage = function(bidPackage) {
+      if (bidPackage.value == undefined) {
+        bidPackage.value = 0;
+      }
+      $scope.project.bidPackages.push(bidPackage);
+      $scope.bidPackage = {};
+    };
+
     $scope.preview = function(project) {
       if (project != undefined) {
         NewProjectService.set(project);

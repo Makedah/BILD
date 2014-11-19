@@ -6,8 +6,17 @@
 		    <span ng-bind="project.name"></span>
 		</div>
 		<div class="col-md-12">
-		    <label for="projectName">Project Bid Package Name: </label>
-		    <span ng-bind="project.bidPackageName"></span>
+		    <label for="projectBidPackages">Project Bid Packages</label>
+		    <table>
+				<tr>
+					<th class="table-input-row">Name</th>
+					<th class="table-input-row">Value</th>
+				</tr>
+				<tr ng-repeat="bidPackage in project.bidPackages">
+				  <td><span ng-bind="bidPackage.name"></span></td>
+				  <td>$<span ng-bind="bidPackage.value"></span></td>
+				</tr>
+			</table>
 		</div>
 		<div class="col-md-12">
 		    <label for="projectName">Project Location: </label>
