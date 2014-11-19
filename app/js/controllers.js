@@ -31,6 +31,12 @@ bildControllers.controller('ProjectsCtrl', ['$scope', 'Projects', 'NewProjectSer
 bildControllers.controller('ProjectDetailsCtrl', ['$scope', 'NewProjectService',
   function($scope, NewProjectService) {
     $scope.project = NewProjectService.get();
+
+    $scope.bidPackagesCount = 0;
+    if ($scope.project.bidPackages != undefined) {
+      $scope.bidPackagesCount = $scope.project.bidPackages.length;
+    }
+  
   }
 ]);
 

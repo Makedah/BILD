@@ -30,6 +30,10 @@ h1 {
   font-size: 50px;
 }
 
+h3 {
+  padding: 30px 0px 20px 30px;
+}
+
 .featurette {
   margin-top: 30px;
   padding-left: 30px;
@@ -281,6 +285,37 @@ td:hover {
 .project-edit-btn {
   margin-top: 10px;
   margin-bottom: 30px;
+}
+
+/* Project Details */
+#top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 100px;
+  height: 300px;
+}
+
+#bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 350px;
+  height: auto;
+}
+
+#packages-table {
+  max-height: 100px;
+  overflow-y: scroll;
+  display: block;
+  overflow: scroll;
+  border-style: solid;
+  border-width: thin;
+}
+
+#packages-table > tbody {
+  width: 100%;
+  display: inline-table;
 }
 
 /* Search */

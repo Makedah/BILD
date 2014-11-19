@@ -2,14 +2,23 @@
 	{
 		"id" : "test-project-1",
 		"name" : "test project 1",
-		"bidPackageName" : "test bid package name",
+		"bidPackages": [ 
+			{
+				"name": "bid package name 1",
+				"value": 1000
+			},
+			{
+				"name": "bid package name 2",
+				"value": 5000
+			}
+		],
 		"location" : {
 			"city" : "San Francisco",
 			"state" : "California",
 			"zipcode" : "94102"
 		},
 		"value" : 1000000,
-		"bidValue" : 90000,
+		"bidValue" : 6000,
 		"duration" : 4,
 		"durationUnits" : "years",
 		"goalPercentage" : 15,
@@ -23,7 +32,12 @@
 	{
 		"id" : "test-project-2",
 		"name" : "test project 2",
-		"bidPackageName" : "test bid package name",
+		"bidPackages": [
+			{
+				"name": "test bid package name",
+				"value": 70000
+			}
+		],
 		"location" : {
 			"city" : "San Mateo",
 			"state" : "California",
@@ -44,7 +58,28 @@
 	{
 		"id" : "test-project-3",
 		"name" : "test project 3",
-		"bidPackageName" : "test bid package name",
+		"bidPackages" : [
+			{
+				"name": "test bid 1",
+				"value": 1000
+			},
+			{
+				"name": "test bid 2",
+				"value": 1000
+			},
+			{
+				"name": "test bid 3",
+				"value": 1000
+			},
+			{
+				"name": "test bid 4",
+				"value": 1000
+			},
+			{
+				"name": "test bid 5",
+				"value": 1000
+			}
+		],
 		"location" : {
 			"city" : "San Francisco",
 			"state" : "California",
