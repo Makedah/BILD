@@ -15,6 +15,12 @@ bildServices.factory('Projects', ['$resource',
   }
 ]);
 
+bildServices.factory('Test', ['$resource', 
+  function($resource) {
+    return $resource('/data/test.json');
+  }
+]);
+
 bildServices.factory('Companies', ['$resource',
   function($resource){
     return $resource('data/companies.json', {}, {

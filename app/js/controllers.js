@@ -43,6 +43,7 @@ bildControllers.controller('NewProjectCtrl', ['$scope', 'NewProjectService',
   function($scope, NewProjectService) {
     $scope.project = NewProjectService.get();
     $scope.project.bidPackages = [];
+    $scope.project.users = [];
 
     $scope.addPackage = function(bidPackage) {
       if (bidPackage.value == undefined) {
@@ -50,6 +51,11 @@ bildControllers.controller('NewProjectCtrl', ['$scope', 'NewProjectService',
       }
       $scope.project.bidPackages.push(bidPackage);
       $scope.bidPackage = {};
+    };
+
+    $scope.addUser = function(user) {
+      $scope.project.users.push(user);
+      $scope.user = {};
     };
 
     $scope.preview = function(project) {
@@ -61,13 +67,15 @@ bildControllers.controller('NewProjectCtrl', ['$scope', 'NewProjectService',
   }
 ]);
 
-bildControllers.controller('ProjectPreviewCtrl', ['$scope', 'NewProjectService',
-  function($scope, NewProjectService) {
+bildControllers.controller('ProjectPreviewCtrl', ['$scope', 'NewProjectService', 'Projects',
+  function($scope, NewProjectService, Projects) {
       $scope.project = NewProjectService.get();
 
-      $scope.publish = function() {
+      $scope.publish = function(project) {
         console.log('save into json -> display json on the projects page');
-        window.location.href = '/app/#/projects';
+        console.log(project);
+       // Projects.save(project);
+        //window.location.href = '/app/#/projects';
       };
 
       $scope.cancel = function() {

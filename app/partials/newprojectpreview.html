@@ -1,9 +1,13 @@
 <h3>Project Preview</h3>
 <div ng-controller="ProjectPreviewCtrl">
-	<div class="col-md-12">
+	<div class="col-md-6">
 		<div class="col-md-12">
 		    <label for="projectName">Project Name: </label>
 		    <span ng-bind="project.name"></span>
+		</div>
+		<div class="col-md-12">
+		    <label for="projectName">Overall Project Value: </label>
+		    $ <span ng-bind="project.value"></span>.00
 		</div>
 		<div class="col-md-12">
 		    <label for="projectBidPackages">Project Bid Packages</label>
@@ -19,18 +23,14 @@
 			</table>
 		</div>
 		<div class="col-md-12">
+		    <label for="projectName">Overall Bid Project Value: </label>
+		    $ <span ng-bind="project.bidValue"></span>.00
+		</div>
+		<div class="col-md-12">
 		    <label for="projectName">Project Location: </label>
 		    <span ng-bind="project.location.city"></span>
 		    <span ng-bind="project.location.state" style="text-transform:uppercase;"></span>
 		    <span ng-bind="project.location.zipcode"></span>
-		</div>
-		<div class="col-md-12">
-		    <label for="projectName">Overall Project Value: </label>
-		    $ <span ng-bind="project.value"></span>.00
-		</div>
-		<div class="col-md-12">
-		    <label for="projectName">Bid Project Value: </label>
-		    $ <span ng-bind="project.bidValue"></span>.00
 		</div>
 		<div class="col-md-12">
 		    <label for="projectName">Project Duration: </label>
@@ -42,11 +42,33 @@
 		    <span ng-bind="project.goalPercentage"></span> %
 		</div>
 		<div class="col-md-12">
-		    <label for="projectName">Company Contact Information:</label></br>
-		    Manager Name: <span ng-bind="project.contact.managerName"></span></br>
-		    Manager Phone #: <span ng-bind="project.contact.managerPhone"></span></br>
-		    Manager Email: <span ng-bind="project.contact.managerEmail"></span>
+		    <label for="projectName">Company Contact Information</label></br>
+		    <table>
+				<tr>
+					<th class="table-input-row">Name</th>
+					<th class="table-input-row">Position</th>
+					<th class="table-input-row">Phone</th>
+					<th class="table-input-row">Email</th>
+				</tr>
+				<tr ng-repeat="user in project.users">
+				  <td><span ng-bind="user.name"></span></td>
+				  <td><span ng-bind="user.position"></span></td>
+				  <td><span ng-bind="user.phone"></span></td>
+				  <td><span ng-bind="user.email"></span></td>
+				</tr>
+			</table>
 		</div>
+	</div>
+	<div class="col-md-6 text-center">
+		<label for="photosAndDocuments">Photos and Documents</label></br>
+		<div class="col-md-6">
+			<img id="img-placeholder" src="img/ProjectPhotoPlaceholder.png">
+		</div>
+		<div class="col-md-6">
+			<img id="img-placeholder" src="img/MapPlaceholder.png">
+		</div>
+	</div>
+	<div class="col-md-12">
 		<button type="submit" class="btn btn-primary" id="publish-btn" ng-click="publish(project)">PUBLISH</button>
 		<button type="submit" class="btn btn-primary" id="cancel-btn" ng-click="cancel()">CANCEL</button>
 	</div>

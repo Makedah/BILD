@@ -14,6 +14,27 @@ body > .view-container { height: auto; min-height: 100%; }
   margin-top: -15px;
 }
 
+/* Buttons */
+.btn-primary {
+  background-color: lightgreen;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-color: green;
+}
+.btn-primary:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+.btn-secondary {
+  width: 200px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  margin-top: 15px;
+}
 /* Home page */
 
 #homeBanner {
@@ -288,6 +309,7 @@ td:hover {
 }
 
 /* Project Details */
+
 #top {
   position: fixed;
   left: 0;
@@ -295,7 +317,6 @@ td:hover {
   top: 100px;
   height: 300px;
 }
-
 #bottom {
   position: fixed;
   left: 0;
@@ -303,7 +324,6 @@ td:hover {
   top: 350px;
   height: auto;
 }
-
 #packages-table {
   max-height: 100px;
   overflow-y: scroll;
@@ -312,17 +332,57 @@ td:hover {
   border-style: solid;
   border-width: thin;
 }
-
 #packages-table > tbody {
   width: 100%;
   display: inline-table;
 }
 
-.table-input-row {
+/* New Project */
+label {
+  font-size: 17px;
+}
+#table-label {
+  font-size: 15px;
+  color: gray;
+}
+#input-field {
+  width: 400px;
+}
+#one-row {
+  margin-top: 15px;
+}
+#table-button {
+  margin-top: 10px;
+  color: white;
+  background-color: orange;
+  border-style: solid;
+  border-width: thin;
+  border-color: gray;
+}
+#table-button:hover {
+  color: black;
+}
+#select-input {
+  margin-top: 5px;
+}
+#project-goal {
   width: 200px;
+  border-radius: 2px;
+}
+#project-goal-addon {
+  width: 35px;
+}
+.table-input-row {
+  width: 150px;
+}
+
+/* Project Preview */
+#img-placeholder {
+  width: 250px;
 }
 
 /* Search */
+
 .title {
   text-align: center;
 }
