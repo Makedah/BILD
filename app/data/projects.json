@@ -22,11 +22,20 @@
 		"duration" : 4,
 		"durationUnits" : "years",
 		"goalPercentage" : 15,
-		"contact" : {
-			"managerName" : "John Galt",
-			"managerPhone" : "",
-			"managerEmail": "john@example.com"
-		},
+		"users" : [
+			{
+				"name" : "John Galt",
+				"position": "manager",
+				"phone" : "",
+				"email": "johngalt@example.com"
+			},
+			{
+				"name" : "John Smith",
+				"position": "assistant manager",
+				"phone" : "",
+				"email": "johnsmith@example.com"
+			}
+		],
 		"createdAt" : "2014-11-01T21:35:43+0000"
 	},
 	{
@@ -48,11 +57,26 @@
 		"duration" : 11,
 		"durationUnits" : "months",
 		"goalPercentage" : 30,
-		"contact" : {
-			"managerName" : "Ann Galt",
-			"managerPhone" : "6508880001",
-			"managerEmail": "ann@gmail.com"
-		},
+		"users" : [
+			{
+				"name" : "Ann Galt",
+				"position": "CEO",
+				"phone" : "888-888-8888",
+				"email": "ann@gmail.com"
+			},
+			{
+				"name" : "Bill Gates",
+				"position": "President",
+				"phone" : "555-555-5555",
+				"email": "bill@example.com"
+			},
+			{
+				"name" : "Keira Knightely",
+				"position": "actress",
+				"phone" : "555-555-5555",
+				"email": "knightely@yahoo.com"
+			}
+		],
 		"createdAt" : "2014-11-11T01:10:05+0000"
 	},
 	{
@@ -90,11 +114,14 @@
 		"duration" : 1,
 		"durationUnits" : "years",
 		"goalPercentage" : 20,
-		"contact" : {
-			"managerName" : "Ann Smith",
-			"managerPhone" : "6508880001",
-			"managerEmail": "asmith@gmail.com"
-		},
+		"users" : [
+			{
+				"name" : "Ann Smith",
+				"position": "manager",
+				"phone" : "888-888-8888",
+				"email": "ann@gmail.com"
+			}
+		],
 		"createdAt" : "2014-11-12T01:31:07+0000"
 	}
 ]
