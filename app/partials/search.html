@@ -324,6 +324,7 @@
 		<table class="table">
 			<thead>
 		        <tr>
+		        	<th></th>
 		            <th>Company Name</th>
 		            <th>Address</th>
 		            <th>City</th>
@@ -333,6 +334,7 @@
 		    </thead>
 		    <tbody>
 		        <tr ng-repeat="company in companies">
+		        	<td><img src="img/logo-placeholder.jpg" style="width:80px;"></td>
 		            <td><span ng-bind="company.name"></span></td>
 		            <td><span ng-bind="company.address"></span></td>
 		            <td><span ng-bind="company.city"></span></td>
