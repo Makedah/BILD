@@ -1,8 +1,11 @@
 <div ng-controller="ProjectDetailsCtrl">
 	<h3 class="welcome">Project Details</h3>
 	<div id="top">
-		<div class="col-md-3">
+		<div class="col-md-3" ng-if="project.files.length == 0">
 			<img src="img/ProjectPhotoPlaceholder.png" style="width:75%;">
+		</div>
+		<div class="col-md-3" ng-if="project.files.length != 0">
+			<img src={{project.files[0].name}} style="width:75%;">
 		</div>
 		<div class="col-md-3">
 			<label for="projectName">Name: </label>

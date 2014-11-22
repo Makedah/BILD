@@ -61,8 +61,8 @@
 	</div>
 	<div class="col-md-6 text-center">
 		<label for="photosAndDocuments">Photos and Documents</label></br>
-		<div class="col-md-12">
-			<img id="img-placeholder" src="img/ProjectPhotoPlaceholder.png">
+		<div class="col-md-12" ng-repeat="file in project.files">
+			<img id="img-placeholder" src="img/{{file.name}}">
 		</div>
 		<div class="col-md-12">
 			<img id="img-placeholder" src="img/MapPlaceholder.png">

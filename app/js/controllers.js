@@ -44,6 +44,7 @@ bildControllers.controller('NewProjectCtrl', ['$scope', 'NewProjectService',
     $scope.project = NewProjectService.get();
     $scope.project.bidPackages = [];
     $scope.project.users = [];
+    $scope.project.files = [];
 
     $scope.addPackage = function(bidPackage) {
       if (bidPackage.value == undefined) {
@@ -56,6 +57,16 @@ bildControllers.controller('NewProjectCtrl', ['$scope', 'NewProjectService',
     $scope.addUser = function(user) {
       $scope.project.users.push(user);
       $scope.user = {};
+    };
+
+    $scope.setFiles = function(element) {
+      $scope.$apply(function($scope) {
+        console.log('files:', element.files);
+        // Turn the FileList object into an Array 
+        for (var i = 0; i < element.files.length; i++) {
+          $scope.project.files.push(element.files[i])
+        }
+      });
     };
 
     $scope.preview = function(project) {
@@ -75,7 +86,7 @@ bildControllers.controller('ProjectPreviewCtrl', ['$scope', 'NewProjectService',
         console.log('save into json -> display json on the projects page');
         console.log(project);
        // Projects.save(project);
-        //window.location.href = '/app/#/projects';
+        window.location.href = '/app/#/projects';
       };
 
       $scope.cancel = function() {

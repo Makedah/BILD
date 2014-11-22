@@ -160,13 +160,14 @@
 		    <label for="photosAndDocuments">Photos and Documents</label>
 		</div>
 			<div class="col-md-3">
-				<button type="submit" class="btn btn-secondary">Upload Photos</button>
+				<input type="file" ng-model-instant id="fileToUpload" multiple onchange="angular.element(this).scope().setFiles(this)">
+				<!-- <button type="submit" class="btn btn-secondary">Upload Files</button> -->
 			</div>
-			<div class="col-md-3">
+			<!-- <div class="col-md-3">
 				<button type="submit" class="btn btn-secondary">Upload Documents</button>
-			</div>
+			</div> -->
 		
-		<div class="col-md-7">
+		<div class="col-md-12">
 			<button type="submit" class="btn btn-primary" ng-click="preview(project)">PREVIEW</button>
 		</div>
 	</div>

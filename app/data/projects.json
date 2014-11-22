@@ -36,6 +36,11 @@
 				"email": "johnsmith@example.com"
 			}
 		],
+		"files" : [
+			{
+				"name": "img/facebook-19.png"
+			}
+		],
 		"createdAt" : "2014-11-01T21:35:43+0000"
 	},
 	{
@@ -75,6 +80,11 @@
 				"position": "actress",
 				"phone" : "555-555-5555",
 				"email": "knightely@yahoo.com"
+			}
+		],
+		"files" : [
+			{
+				"name": "img/apple-hq15.jpg"
 			}
 		],
 		"createdAt" : "2014-11-11T01:10:05+0000"
@@ -121,6 +131,9 @@
 				"phone" : "888-888-8888",
 				"email": "ann@gmail.com"
 			}
+		],
+		"files" : [
+			
 		],
 		"createdAt" : "2014-11-12T01:31:07+0000"
 	}
