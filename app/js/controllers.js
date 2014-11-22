@@ -149,8 +149,19 @@ bildControllers.controller('CorporationsCtrl', ['$scope',
 
 bildControllers.controller('UserCtrl', ['$scope',
   function($scope) {
-     $scope.user = {}; //undefined;
-     $scope.user.name = 'Apple';
-     $scope.user.logo = 'img/Apple-Logo-black.png';
+     // if ($scope.user != undefined) {
+      $scope.user = {};
+      $scope.user.name = 'Apple';
+      $scope.user.logo = 'img/Apple-Logo-black.png';
+    // }
+     $scope.login = function() {
+      $scope.user = {};
+      $scope.user.name = 'Apple';
+      $scope.user.logo = 'img/Apple-Logo-black.png';
+     }
+     $scope.logout = function() {
+        $scope.user = undefined;
+        window.location.href = '/app/#/';
+     }
   }
 ]);
