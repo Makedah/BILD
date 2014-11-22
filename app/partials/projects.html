@@ -1,7 +1,7 @@
 <div ng-controller="UserCtrl">
 	<div class="welcome" ng-if="user !== undefined">
 		<h2>Welcome, {{user.name}}!</h2>
-		<h3>Connect with over # small businesses within our system<h3>
+		<h3>Connect with over # small businesses within our system</h3>
 	</div>
 	<div class="col-md-12 user-buttons">
 	 	<p class="trial-button">
@@ -18,7 +18,7 @@
 	  <li role="presentation"><a href="#messages">Messages</a></li>
 	</ul>
 </div>
-<div class="col-md-7">
+<div class="col-md-7" id="projects-section">
 	<div ng-controller="ProjectsCtrl" class="projects-list">
 		<h2>Total Number of Projects: {{projectsCount}}</h2>
 		<h2>Total Value of Projects: $ {{projectsValue}}.00</h2>
@@ -44,7 +44,10 @@
 	</div>
 </div>	
 <div class="col-md-3">
-	Right Hand Side
+	<h2>Hot News</h2>
+	<h2>Pie Charts</h2>
+	<h2>Alerts</h2>
+	<h2>Bid Notifications</h2>
 </div>	
 	
 

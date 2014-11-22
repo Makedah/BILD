@@ -31,9 +31,10 @@ body > .view-container { height: auto; min-height: 100%; }
 .btn-secondary {
   width: 200px;
   text-align: center;
-  background-color: green;
+  background-color: orange;
   color: white;
   margin-top: 15px;
+  border-color: black;
 }
 /* Home page */
 
@@ -246,6 +247,9 @@ body {
 
 .welcome {
   padding-left: 30px;
+}
+#projects-section {
+  margin-top: -25px;
 }
 
 /* Navigation Menu */
