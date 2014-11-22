@@ -397,6 +397,7 @@ label {
 
 .long-field-select {
   width: 275px;
+  margin-bottom: 15px;
 }
 
 .do-next-options {
