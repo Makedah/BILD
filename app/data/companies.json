@@ -2,55 +2,67 @@
 	{
 		"id": "certified-air-balance-co-inc",
 		"name": "CERTIFIED AIR BALANCE CO., INC.",
-		"address": "2210 SOLEDAD CANYON ROAD, SUITE B",
-		"city": "ACTON",
-		"state": "CA",
-		"zipcode": "93510",
-		"district": 1
+		"location" : {
+			"address": "2210 SOLEDAD CANYON ROAD, SUITE B",
+			"city": "ACTON",
+			"state": "CA",
+			"zipcode": "93510",
+			"district": 1
+		}
 	},
 	{
 		"id": "lumensource-llc",
 		"name": "LUMENSOURCE LLC",
-		"address": "2964 WEST VALLEY BLVD",
-		"city": "ALHAMBRA",
-		"state": "CA",
-		"zipcode": "91803",
-		"district": 1
+		"location": {
+			"address": "2964 WEST VALLEY BLVD",
+			"city": "ALHAMBRA",
+			"state": "CA",
+			"zipcode": "91803",
+			"district": 1
+		}	
 	},
 	{
 		"id": "blaster-communications",
 		"name": "BLASTER COMMUNICATIONS",
-		"address": "6154 CRYSTAL DR",
-		"city": "ALTA LOMA",
-		"state": "CA",
-		"zipcode": "91701",
-		"district": 1
+		"location": {
+			"address": "6154 CRYSTAL DR",
+			"city": "ALTA LOMA",
+			"state": "CA",
+			"zipcode": "91701",
+			"district": 1
+		}
 	},
 	{
 		"id": "larranage-trucking",
 		"name": "LARRANAGA TRUCKING",
-		"address": "2206 N. EAST STREET",
-		"city": "ALTURAS",
-		"state": "CA",
-		"zipcode": "96101",
-		"district": 1
+		"location": {
+			"address": "2206 N. EAST STREET",
+			"city": "ALTURAS",
+			"state": "CA",
+			"zipcode": "96101",
+			"district": 1
+		}
 	},
 	{
 		"id": "baylink-engineering-consulting-llc",
 		"name": "BAYLINK ENGINEERING & CONSULTING, LLC",
-		"address": "10 SERENA PL",
-		"city": "AMERICAN CANYON",
-		"state": "CA",
-		"zipcode": "94503",
-		"district": 1
+		"location": {
+			"address": "10 SERENA PL",
+			"city": "AMERICAN CANYON",
+			"state": "CA",
+			"zipcode": "94503",
+			"district": 1
+		}
 	},
 	{
 		"id": "schotka-construction-inc",
 		"name": "SCHOTKA CONSTRUCTION INC",
-		"address": "5555 NAPA VALLEJO HWY",
-		"city": "AMERICAN CANYON",
-		"state": "CA",
-		"zipcode": "94503",
-		"district": 1
+		"location": {
+			"address": "5555 NAPA VALLEJO HWY",
+			"city": "AMERICAN CANYON",
+			"state": "CA",
+			"zipcode": "94503",
+			"district": 1
+		}
 	}
 ]

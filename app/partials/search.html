@@ -308,15 +308,15 @@
 	</div>
 	<div class="col-md-6">
 		<h4 class="title">Results</h4>
-		<div class="col-md-4">
-			<input type="text" class="form-control" placeholder="Trade Specialty" ng-model="filter.tradeSpecialty">
+		<div class="col-md-6">
+			<input type="text" class="form-control" placeholder="Name or Trade Specialty" ng-model="searchText.name">
 		</div>
-	    <div class="col-md-4">
-			<input type="text" class="form-control" placeholder="Address, City, Zip" ng-model="filter.location">	
+	    <div class="col-md-6">
+			<input type="text" class="form-control" placeholder="Address, City, Zip" ng-model="searchText.location">	
 		</div>
-		<div class="col-md-4">
-			<input type="text" class="form-control" placeholder="Mile Radius" ng-model="filter.mileRadius">
-		</div>
+		<!-- <div class="col-md-4">
+			<input type="text" class="form-control" placeholder="Mile Radius">
+		</div> -->
 		<div id="btn-row">
 			<button type="submit" class="btn btn-primary" id="search-btn">SEARCH</button>
 		</div>
@@ -333,13 +333,13 @@
 		        </tr>
 		    </thead>
 		    <tbody>
-		        <tr ng-repeat="company in companies">
+		        <tr ng-repeat="company in companies | filter:searchText">
 		        	<td><img src="img/logo-placeholder.jpg" style="width:80px;"></td>
 		            <td><span ng-bind="company.name"></span></td>
-		            <td><span ng-bind="company.address"></span></td>
-		            <td><span ng-bind="company.city"></span></td>
-		            <td><span ng-bind="company.zipcode"></td>
-		            <td><span ng-bind="company.district"></td>
+		            <td><span ng-bind="company.location.address"></span></td>
+		            <td><span ng-bind="company.location.city"></span></td>
+		            <td><span ng-bind="company.location.zipcode"></td>
+		            <td><span ng-bind="company.location.district"></td>
 		        </tr>
 		    </tbody>
 		</table>
