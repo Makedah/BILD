@@ -8,7 +8,8 @@
 			"state": "CA",
 			"zipcode": "93510",
 			"district": 1
-		}
+		},
+		"logo": "img/companies/certifiedairbalance-logo.jpg"
 	},
 	{
 		"id": "lumensource-llc",
@@ -19,7 +20,8 @@
 			"state": "CA",
 			"zipcode": "91803",
 			"district": 1
-		}	
+		},
+		"logo": "img/companies/lumensource-logo.png"	
 	},
 	{
 		"id": "blaster-communications",
@@ -30,7 +32,8 @@
 			"state": "CA",
 			"zipcode": "91701",
 			"district": 1
-		}
+		},
+		"logo": "img/logo-placeholder.jpg"	
 	},
 	{
 		"id": "larranage-trucking",
@@ -41,7 +44,8 @@
 			"state": "CA",
 			"zipcode": "96101",
 			"district": 1
-		}
+		},
+		"logo": "img/logo-placeholder.jpg"	
 	},
 	{
 		"id": "baylink-engineering-consulting-llc",
@@ -52,7 +56,8 @@
 			"state": "CA",
 			"zipcode": "94503",
 			"district": 1
-		}
+		},
+		"logo": "img/logo-placeholder.jpg"	
 	},
 	{
 		"id": "schotka-construction-inc",
@@ -63,6 +68,7 @@
 			"state": "CA",
 			"zipcode": "94503",
 			"district": 1
-		}
+		},
+		"logo": "img/companies/SC_logo.gif"	
 	}
 ]
