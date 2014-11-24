@@ -16,16 +16,16 @@ body > .view-container { height: auto; min-height: 100%; }
 
 /* Buttons */
 .btn-primary {
-  background-color: #2EB82E;
+  background-color: #2EB82E; /* green */
   color: white;
   text-transform: uppercase;
   margin-top: 15px;
   margin-bottom: 15px;
-  border-color: green;
+  border-color: #0E370E; /* darkest green */
 }
 .btn-primary:hover {
-  background-color: #208120;
-  /*color: black;*/
+  background-color: #208120; /* darker green */
+  border-color: #0E370E; /* darkest green */
 }
 
 .btn-secondary {
