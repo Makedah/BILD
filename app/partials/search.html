@@ -353,8 +353,8 @@
 		    <tbody>
 		        <tr ng-repeat="company in companies | filter:searchText">
 		        	<td><img src={{company.logo}} style="width:80px;"></td>
-		            <td><span ng-bind="company.name"></span></td>
-		            <td><span ng-bind="company.location.address"></span></td>
+		            <td style="min-width:150px;"><span ng-bind="company.name"></span></td>
+		            <td style="min-width:160px;"><span ng-bind="company.location.address"></span></td>
 		            <td><span ng-bind="company.location.city"></span></td>
 		            <td><span ng-bind="company.location.zipcode"></td>
 		            <td><span ng-bind="company.location.district"></td>

@@ -131,10 +131,8 @@ body {
 }
 
 
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
+/************************ Top Navbar ************************/
 
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
   position: absolute;
   top: 0;
@@ -199,6 +197,17 @@ body {
   color: #262626;
   text-decoration: none;
   background-color: orange;
+}
+
+#beta-mode {
+  width: 250px;
+  color: #2EB82E; /* green */
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 20%;
+  font-size: 18px;
+  text-shadow: 1px 1px 5px white;
 }
 
 /* CUSTOMIZE THE CAROUSEL
