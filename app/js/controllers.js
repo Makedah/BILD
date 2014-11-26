@@ -105,6 +105,7 @@ bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
     });
 
     $scope.itemsPerPage = 5;
+    console.log('items pers page: ' + $scope.itemsPerPage);
     $scope.currentPage = 0;
     
     $scope.range = function() {
@@ -116,7 +117,7 @@ bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
       var pageCount = $scope.pageCount();
 
       if (pageCount > 0) {
-        
+
         var rangeSize = Math.ceil($scope.companiesCount / $scope.itemsPerPage);
         if (start >  pageCount - rangeSize) {
           start = $scope.pageCount() - rangeSize + 1;
@@ -140,6 +141,7 @@ bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
     };
 
     $scope.pageCount = function() {
+      
       if ($scope.companiesCount != undefined) {
         return Math.ceil($scope.companiesCount / $scope.itemsPerPage);
       }
@@ -159,6 +161,26 @@ bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
     $scope.setPage = function(n) {
       $scope.currentPage = n;
     };
+
+    $scope.isSearchFieldEmpty = true;
+
+     $scope.onSearchNameChange = function() {
+
+      if ($scope.searchText.name == "" || typeof $scope.searchText.name === 'undefined') {
+        $scope.isSearchFieldEmpty = true;
+      } else {
+        $scope.isSearchFieldEmpty = false;
+      }
+     };
+
+     $scope.onSearchLocationChange = function() {
+
+      if ($scope.searchText.location == "" || typeof $scope.searchText.location === 'undefined') {
+        $scope.isSearchFieldEmpty = true;
+      } else {
+        $scope.isSearchFieldEmpty = false;
+      }
+     };
   }
 ]);
 

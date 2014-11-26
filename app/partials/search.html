@@ -327,10 +327,10 @@
 	<div class="col-md-6">
 		<h4 class="title">Results</h4>
 		<div class="col-md-6">
-			<input type="text" class="form-control" placeholder="Name or Trade Specialty" ng-model="searchText.name">
+			<input type="text" class="form-control" placeholder="Name or Trade Specialty" ng-model="searchText.name" ng-change="onSearchNameChange()">
 		</div>
 	    <div class="col-md-6">
-			<input type="text" class="form-control" placeholder="Address, City, Zip" ng-model="searchText.location">	
+			<input type="text" class="form-control" placeholder="Address, City, Zip" ng-model="searchText.location" ng-change="onSearchLocationChange()">	
 		</div>
 		<!-- <div class="col-md-4">
 			<input type="text" class="form-control" placeholder="Mile Radius">
@@ -352,6 +352,7 @@
 		    </thead>
 		    <tbody>
 		        <tr ng-repeat="company in companies | 
+		        	filter: searchText |
 		        	offset: currentPage*itemsPerPage | 
 		        	limitTo: itemsPerPage">
 		        	<td><img src={{company.logo}} style="width:80px;"></td>
