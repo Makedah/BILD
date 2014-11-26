@@ -17,6 +17,9 @@ bildApp.config(['$routeProvider',
       when('/', {
         templateUrl: 'partials/home.html'
       }).
+      when('/aboutus', {
+        templateUrl: 'partials/aboutus.html'
+      }).
       when('/corporations', {
         templateUrl: 'partials/corporations.html'
       }).
@@ -66,5 +69,12 @@ bildApp.config(function($stateProvider, $urlRouterProvider) {
     })
     .state('library', {
       templateUrl: "partials/projectDetails/library.html"
+    })
+    .state('mission', {
+      templateUrl: "partials/aboutUs/mission.html",
+      controller:'AboutUsCtrl'
+    })
+    .state('team', {
+      templateUrl: "partials/aboutUs/team.html"
     })
 });

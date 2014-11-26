@@ -141,7 +141,7 @@ bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
     };
 
     $scope.pageCount = function() {
-      
+
       if ($scope.companiesCount != undefined) {
         return Math.ceil($scope.companiesCount / $scope.itemsPerPage);
       }
@@ -242,5 +242,11 @@ bildControllers.controller('UserCtrl', ['$scope',
         $scope.user = undefined;
         window.location.href = '/app/#/';
      }
+  }
+]);
+
+bildControllers.controller('AboutUsCtrl', ['$scope', '$state',
+  function($scope, $state) {
+    $state.go('mission');
   }
 ]);

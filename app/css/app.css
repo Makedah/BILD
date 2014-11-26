@@ -221,9 +221,12 @@ body {
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
-  /*padding-bottom: 60px;*/
 }
 
+#corporations-caption {
+  background-color: rgba(125,128,125,0.7);
+  border-radius: 15px;
+}
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 600px;
