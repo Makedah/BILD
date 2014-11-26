@@ -104,12 +104,58 @@ bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
        $scope.companiesCount = data.length;
     });
 
-    // console.log($scope.searchText);
-    // $scope.searchCompanies = function() {
-    //   console.log($scope.searchText);
-      
-    // }
+    $scope.itemsPerPage = 5;
+    $scope.currentPage = 0;
+    
+    $scope.range = function() {
+      var rangeSize = 5; 
+      var ret = [];
+      var start;
 
+      start = $scope.currentPage;
+      var pageCount = $scope.pageCount();
+      if (pageCount > 0) {
+        if (start >  pageCount - rangeSize) {
+          start = $scope.pageCount() - rangeSize + 1;
+        }
+
+        for (var i = 0; i < rangeSize; i++) {
+          ret.push(i);
+        }
+      } 
+      return ret;
+    };
+
+    $scope.prevPage = function() {
+      if ($scope.currentPage > 0) {
+        $scope.currentPage--;
+    }
+    };
+
+    $scope.prevPageDisabled = function() {
+      return $scope.currentPage === 0 ? "disabled" : "";
+    };
+
+    $scope.pageCount = function() {
+      if ($scope.companiesCount != undefined) {
+        return Math.ceil($scope.companiesCount / $scope.itemsPerPage);
+      }
+      else return 0;
+    };
+
+    $scope.nextPage = function() {
+      if ($scope.currentPage < $scope.pageCount()-1 && $scope.pageCount() > 1) {
+        $scope.currentPage++;
+      }
+    };
+
+    $scope.nextPageDisabled = function() {
+      return $scope.currentPage === ($scope.pageCount()-1) ? "disabled" : "";
+    };
+
+    $scope.setPage = function(n) {
+      $scope.currentPage = n;
+    };
   }
 ]);
 

@@ -70,5 +70,210 @@
 			"district": 1
 		},
 		"logo": "img/companies/SC_logo.gif"	
+	},
+	{
+		"id": "dm-trucking",
+		"name": "DM TRUCKING",
+		"location": {
+			"address": "2872 W. KEYS LANE",                                 	
+			"city": "ANAHEIM",             	
+			"state": "CA",	
+			"zipcode": "92804",	
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "maid-in-california-housecleaning-agency-inc",
+		"name": "MAID IN CALIFORNIA HOUSECLEANING AGENCY, INC.", 
+		"location": {
+			"address": "4071 E. LA PALMA AVE, SUITE A",            
+			"city": "ANAHEIM",    
+			"state": "CA",
+			"zipcode": "92807",	
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "dekker-consulting",
+		"name": "DEKKER CONSULTING",
+		"location": {
+			"address": "3604 BROOKDALE CTR",
+			"city": "ANTIOCH",
+			"state": "CA",
+			"zipcode": "94509",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "sadorra-rail-consulting-engineering-services",
+		"name": "SADORRA RAIL CONSULTING/ENGINEERING SERVICES",
+		"location": {
+			"address": "5509 GLENHANE COURT",
+			"city": "ANTIOCH",
+			"state": "CA",
+			"zipcode": "94531",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "gr-sundberg-inc",
+		"name": "GR SUNDBERG, INC.",
+		"location": {
+			"address": "5211 BOYD ROAD",
+			"city": "ARCATA",
+			"state": "CA",
+			"zipcode": "95521",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "j-house-environmental-inc",
+		"name": "J HOUSE ENVIRONMENTAL, INC.",
+		"location": {
+			"address": "251 AUBURN RAVINE RD. #208",
+			"city": "AUBURN",
+			"state": "CA",
+			"zipcode": "95603",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "kalendarium-inc",
+		"name": "KALENDARIUM, INC",
+		"location": {
+			"address": "1625 FOXRIDGE CIRCLE",
+			"city": "AUBURN",
+			"state": "CA",
+			"zipcode": "94503",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "dod-construction",
+		"name": "DOD CONSTRUCTION",
+		"location": {
+			"address": "3501 EDISON HIGHWAY",
+			"city": "BAKERSFIELD",
+			"state": "CA",
+			"zipcode": "93307",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "edison-construction-inc",
+		"name": "EDISON CONSTRUCTION, INC.",
+		"location": {
+			"address": "260 FAIRFAX ROAD",
+			"city": "BAKERSFIELD",
+			"state": "CA",
+			"zipcode": "93307",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"                             	                                	         	
+	},
+	{
+		"id": "gemstone-masonry-inc",
+		"name": "GEMSTONE MASONRY, INC",
+		"location": {
+			"address": "6403 ALDERBROOK LANE",
+			"city": "BAKERSFIELD",
+			"state": "CA",
+			"zipcode": "93312",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "sandoval-surveying",
+		"name": "SANDOVAL SURVEYING",
+		"location": {
+			"address": "1307 QUINCY STREET",
+			"city": "BAKERSFIELD",
+			"state": "CA",
+			"zipcode": "93305",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"                            	                               	
+	},
+	{
+		"id": "rail-surveyors-and-engineers-inc",
+		"name": "RAIL SURVEYORS AND ENGINEERS, INC.",
+		"location": {
+			"address": "1075 OLD COUNTY ROAD, SUITE D",
+			"city": "BELMONT",
+			"state": "CA",
+			"zipcode": "94002",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"		                          	                    	     
+	},
+	{
+		"id": "american-compliance-services",
+		"name": "AMERICAN COMPLIANCE SERVICES",
+		"location": {
+			"address": "554 MORNING GLORY DRIVE",
+			"city": "BENICIA",
+			"state": "CA",
+			"zipcode": "94510",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"                                	                           	         
+	},
+	{
+		"id": "jbm-real-estate-consultation",
+		"name": "JBM REAL ESTATE CONSULTATION",
+		"location": {
+			"address": "2127 GOLDENHILL WAY",
+			"city": "BENICIA",
+			"state": "CA",
+			"zipcode": "94510",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"                              	                               	       
+	},
+	{
+		"id": "johnny-toughs-truck-&-pull",
+		"name": "JOHNNY TOUGH'S TRUCK & PULL",
+		"location": {
+			"address": "510 ALDER COURT",
+			"city": "BENICIA",
+			"state": "CA",
+			"zipcode": "94510",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "ann-phillips-architecture",
+		"name": "ANNE PHILLIPS ARCHITECTURE ",
+		"location": {
+			"address": "2234 TENTH STREET",
+			"city": "BERKELEY",
+			"state": "CA",
+			"zipcode": "94710",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
+	},
+	{
+		"id": "bay-line-cutting-&-coring-inc",
+		"name": "BAY LINE CUTTING & CORING, INC.",
+		"location": {
+			"address": "1635 4TH STREET",
+			"city": "BERKELEY",
+			"state": "CA",
+			"zipcode": "94710",
+			"district": 1
+		},
+		"logo": "img/logo-placeholder.jpg"
 	}
 ]
+

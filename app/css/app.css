@@ -439,6 +439,49 @@ label {
   margin-top: 20px;
 }
 
+.pagination {
+  display: inline;
+  height: 40px;
+
+}
+.pagination > ul {
+  display: flex;
+}
+.pagination > ul > li {
+    margin-right: 10px;
+    list-style: none;
+}
+.pagination ul > .disabled > a {
+  color: #999999;
+  background-color: transparent;
+  cursor: default;
+  text-decoration: none;
+}
+.pagination ul>.active>a, .pagination ul>.active>span {
+  color: green;
+}
+
+#companies-results-table {
+  border-color: gray;
+}
+
+#companies-results-table > tfoot {
+  display: table-footer-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.table th, .table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+Inherited from table.table.table-striped.table-condensed.table-hover
+
+
 /*********************** Footer **************************/
 
 .footer {
