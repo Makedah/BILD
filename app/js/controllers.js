@@ -108,13 +108,16 @@ bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
     $scope.currentPage = 0;
     
     $scope.range = function() {
-      var rangeSize = 5; 
+      
       var ret = [];
       var start;
 
       start = $scope.currentPage;
       var pageCount = $scope.pageCount();
+
       if (pageCount > 0) {
+        
+        var rangeSize = Math.ceil($scope.companiesCount / $scope.itemsPerPage);
         if (start >  pageCount - rangeSize) {
           start = $scope.pageCount() - rangeSize + 1;
         }

@@ -365,7 +365,7 @@
 		    <tfoot>
 		      <td colspan="6">
 		        <div class="pagination">
-		          <ul>
+		          <ul style="margin-left:-40px;">
 		            <li ng-class="prevPageDisabled()">
 		              <a href ng-click="prevPage()">« Prev</a>
 		            </li>
@@ -376,6 +376,15 @@
 		              <a href ng-click="nextPage()">Next »</a>
 		            </li>
 		          </ul>
+		          <div>
+	          	 	<span>Items per page</span>
+			          <select name="itemsPerPage" ng-model="itemsPerPage">
+			          		<option value="5" class="active">5</option>
+							<option value="10">10</option>	
+				    		<option value="25">25</option>	
+				    		<option value="50">50</option>
+					  </select>
+				 	</div>
 		        </div>
 		      </td>
 		    </tfoot>
