@@ -71,8 +71,7 @@ bildApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "partials/projectDetails/library.html"
     })
     .state('mission', {
-      templateUrl: "partials/aboutUs/mission.html",
-      controller:'AboutUsCtrl'
+      templateUrl: "partials/aboutUs/mission.html"
     })
     .state('team', {
       templateUrl: "partials/aboutUs/team.html"
