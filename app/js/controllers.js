@@ -230,13 +230,13 @@ bildControllers.controller('UserCtrl', ['$scope',
   function($scope) {
      // if ($scope.user != undefined) {
       $scope.user = {};
-      $scope.user.name = 'Apple';
-      $scope.user.logo = 'img/Apple-Logo-black.png';
+      $scope.user.name = 'Corporation';
+      $scope.user.logo = 'img/Corporation-logo.png';
     // }
      $scope.login = function() {
       $scope.user = {};
-      $scope.user.name = 'Apple';
-      $scope.user.logo = 'img/Apple-Logo-black.png';
+      $scope.user.name = 'Corporation';
+      $scope.user.logo = 'img/Corporation-logo.png';
      }
      $scope.logout = function() {
         $scope.user = undefined;
