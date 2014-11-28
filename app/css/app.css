@@ -482,6 +482,14 @@ label {
   border-top: 1px solid #dddddd;
 }
 
+/************************ Small Business ******************/
+
+#small-business-top {
+  margin-top: 30px;
+}
+.business-caption {
+  padding-top: 40px;
+}
 
 /*********************** Footer **************************/
 
