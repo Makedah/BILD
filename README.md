@@ -22,8 +22,12 @@ Running npm install will also automatically use bower to download the Angular fr
 The project is preconfigured with a number of npm helper scripts:
 
 npm start : start a local development web-server
+
 npm test : start the Karma unit test runner
+
 npm run protractor : run the Protractor end to end (E2E) tests
+
 npm run update-webdriver : install the drivers needed by Protractor
+
 
 
