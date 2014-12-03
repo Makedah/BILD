@@ -462,8 +462,8 @@
 			</table>
 			<table>
 				<tr>
-				  <td><input type="text" ng-model="officer.name" placeholder="Name"></td>
-				  <td><input type="text" ng-model="officer.title" placeholder="Title"></td>
+				  <td><input type="text" ng-model="officer.name" placeholder="Name" style="height:40px;"></td>
+				  <td><input type="text" ng-model="officer.title" placeholder="Title" style="height:40px;"></td>
 				  <td><input type="date" ng-model="officer.dateAppointed" placeholder="Date Appointed"></td>
 				  <td><select ng-model="officer.ethnicity">
 					<option value="African American">African/African American</option>
@@ -482,4 +482,5 @@
 			</table>
 		</div>
 	</div>
+	<button type="submit" class="btn btn-primary" ng-click="preview(firm)">PREVIEW</button>
 </div>

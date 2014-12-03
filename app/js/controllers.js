@@ -248,20 +248,28 @@ bildControllers.controller('AboutUsCtrl', ['$scope', '$state',
   }
 ]);
 
-bildControllers.controller('NewBusinessCtrl', ['$scope', 
-  function($scope) {
-       // $scope.firm.receits = [];    
-       // $scope.firm.officers = [];
+bildControllers.controller('NewBusinessCtrl', ['$scope', 'NewFirmService',
+  function($scope, NewFirmService) {
+      $scope.firm = NewFirmService.get();
+       $scope.firm.receits = [];    
+       $scope.firm.officers = [];
 
     $scope.addReceit = function(receit) {
-
-      // $scope.firm.receits.push(user);
-      // $scope.receit = {};
+      $scope.firm.receits.push(receit);
+      $scope.receit = {};
     };
-    $scope.addOfficer = function(officer) {
 
-      // $scope.firm.officers.push(officer);
-      // $scope.officer = {};
+    $scope.addOfficer = function(officer) {
+      $scope.firm.officers.push(officer);
+      $scope.officer = {};
+    };
+
+    $scope.preview = function(firm) {
+      if (firm != undefined) {
+        console.log(firm);
+        NewFirmService.set(firm);
+        // window.location.href += '/preview';
+      } 
     };
   }
 ]);

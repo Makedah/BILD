@@ -50,3 +50,22 @@ bildServices.factory('NewProjectService',
 	  	}
 	}
 );
+
+bildServices.factory('NewFirmService', 
+  function() {
+    var firm = {};
+
+    var setFirm = function(data) {
+      firm = data;
+    }
+
+    var getFirm = function(){
+          return firm;
+      }
+
+      return {
+        set: setFirm,
+        get: getFirm
+      }
+  }
+);
