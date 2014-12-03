@@ -141,7 +141,6 @@ bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
     };
 
     $scope.pageCount = function() {
-
       if ($scope.companiesCount != undefined) {
         return Math.ceil($scope.companiesCount / $scope.itemsPerPage);
       }
@@ -165,7 +164,6 @@ bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
     $scope.isSearchFieldEmpty = true;
 
      $scope.onSearchNameChange = function() {
-
       if ($scope.searchText.name == "" || typeof $scope.searchText.name === 'undefined') {
         $scope.isSearchFieldEmpty = true;
       } else {
@@ -174,7 +172,6 @@ bildControllers.controller('SearchCtrl', ['$scope', 'Companies',
      };
 
      $scope.onSearchLocationChange = function() {
-
       if ($scope.searchText.location == "" || typeof $scope.searchText.location === 'undefined') {
         $scope.isSearchFieldEmpty = true;
       } else {
@@ -248,5 +245,23 @@ bildControllers.controller('UserCtrl', ['$scope',
 bildControllers.controller('AboutUsCtrl', ['$scope', '$state',
   function($scope, $state) {
     $state.go('mission');
+  }
+]);
+
+bildControllers.controller('NewBusinessCtrl', ['$scope', 
+  function($scope) {
+       // $scope.firm.receits = [];    
+       // $scope.firm.officers = [];
+
+    $scope.addReceit = function(receit) {
+
+      // $scope.firm.receits.push(user);
+      // $scope.receit = {};
+    };
+    $scope.addOfficer = function(officer) {
+
+      // $scope.firm.officers.push(officer);
+      // $scope.officer = {};
+    };
   }
 ]);
