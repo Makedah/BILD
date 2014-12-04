@@ -250,9 +250,10 @@ bildControllers.controller('AboutUsCtrl', ['$scope', '$state',
 
 bildControllers.controller('NewBusinessCtrl', ['$scope', 'NewFirmService',
   function($scope, NewFirmService) {
-      $scope.firm = NewFirmService.get();
-       $scope.firm.receits = [];    
-       $scope.firm.officers = [];
+    $scope.firm = NewFirmService.get();
+    $scope.firm.receits = [];    
+    $scope.firm.officers = [];
+    $scope.firm.managers = [];
 
     $scope.addReceit = function(receit) {
       $scope.firm.receits.push(receit);
@@ -264,6 +265,14 @@ bildControllers.controller('NewBusinessCtrl', ['$scope', 'NewFirmService',
       $scope.officer = {};
     };
 
+    $scope.addOfficer = function(officer) {
+      $scope.firm.officers.push(officer);
+      $scope.officer = {};
+    };
+    $scope.addManager = function(manager) {
+      $scope.firm.managers.push(manager);
+      $scope.manager = {};
+    };
     $scope.preview = function(firm) {
       if (firm != undefined) {
         console.log(firm);
