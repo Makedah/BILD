@@ -176,26 +176,26 @@
 			<div class="input-group">
 				<span>Firm Size </span>
 				<select ng-model="firm.size">
-				    <option value="size1">1-10 employees</option>	
-				    <option value="size2">11-50 employees</option>	
-				    <option value="size3">50-250 employees</option>	
-				    <option value="size4">251-500 employees</option>
-				    <option value="size5">500+ employees</option>
+				    <option value="1-10 employees">1-10 employees</option>	
+				    <option value="11-50 employees">11-50 employees</option>	
+				    <option value="50-250 employees">50-250 employees</option>	
+				    <option value="251-500 employees">251-500 employees</option>
+				    <option value="500+ employees">500+ employees</option>
 				</select>
 			</div>
 			<div class="input-group">
 				<span>Firm Revenues </span>
 				<select ng-model="firm.valuation">
-				    <option value="revenue1">&lt; $100,000</option>
-				    <option value="revenue2">$100,000 - $500,000</option>
-				    <option value="revenue3">$500,001 - $1,000,000</option>
-				    <option value="revenue4">$1,000,001 - $2,000,000</option>
-				    <option value="revenue5">$2,000,001 - $4,000,000</option>
-				    <option value="revenue6">$4,000,001 - $7,000,000</option>
-				    <option value="revenue7">$7,000,001 - $10,000,000</option>
-				    <option value="revenue8">$10,000,001 - $15,000,000</option>
-				    <option value="revenue9">$15,000,001 - $20,000,000</option>
-				    <option value="revenue10">$20,000,000+</option>
+				    <option value="&lt; $100,000">&lt; $100,000</option>
+				    <option value="$100,000 - $500,000">$100,000 - $500,000</option>
+				    <option value="$500,001 - $1,000,000">$500,001 - $1,000,000</option>
+				    <option value="$1,000,001 - $2,000,000">$1,000,001 - $2,000,000</option>
+				    <option value="$2,000,001 - $4,000,000">$2,000,001 - $4,000,000</option>
+				    <option value="4,000,001 - $7,000,000">$4,000,001 - $7,000,000</option>
+				    <option value="$7,000,001 - $10,000,000">$7,000,001 - $10,000,000</option>
+				    <option value="$10,000,001 - $15,000,000">$10,000,001 - $15,000,000</option>
+				    <option value="$15,000,001 - $20,000,000">$15,000,001 - $20,000,000</option>
+				    <option value="$20,000,000+">$20,000,000+</option>
 				</select>
 			</div>
 			<div class="input-group">
@@ -271,6 +271,7 @@
 			</div>
 			<label>License</label>
 			<input id="input-field" type="text" class="form-control" placeholder="Business License #" ng-model="firm.license.number">
+			<!-- convert license type into select drop down -->
 			<input id="input-field" type="text" class="form-control" placeholder="Professional License/Permit Type" ng-model="firm.license.type">
 			<span>License State</span>
 			<select name="state" ng-model="firm.license.state">
@@ -668,5 +669,6 @@
 			<input id="input-field" type="text" class="form-control" placeholder="Bonding Limit - Aggregate" ng-model="firm.bonding.limit.aggregate">
 		</div>
 	</div>
-	<button type="submit" class="btn btn-primary" ng-click="preview(firm)">PREVIEW</button>
+	<button type="submit" class="btn btn-primary" ng-click="save(firm)">SAVE</button>
+	<button type="submit" class="btn btn-primary" ng-click="submit(firm)">SUBMIT</button>
 </div>

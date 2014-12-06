@@ -204,7 +204,6 @@ bildControllers.controller('CorporationsCtrl', ['$scope',
 
           $(this).html(html);
         }
-
       });
 
       $(".morelink").click(function(){
@@ -273,12 +272,26 @@ bildControllers.controller('NewBusinessCtrl', ['$scope', 'NewFirmService',
       $scope.firm.managers.push(manager);
       $scope.manager = {};
     };
-    $scope.preview = function(firm) {
+    $scope.submit = function(firm) {
       if (firm != undefined) {
         console.log(firm);
         NewFirmService.set(firm);
-        // window.location.href += '/preview';
+        window.location.href = '/app/#/business/profile';
       } 
+    };
+    $scope.save = function(firm) {
+      console.log('save firm profile');
     };
   }
 ]);
+
+bildControllers.controller('BusinessProfileCtrl', ['$scope', 'SmallBusiness',
+  function($scope, SmallBusiness) {
+    $scope.business = SmallBusiness.query();
+
+    $scope.business.$promise.then(function(data) {
+       console.log(data);
+    });
+  }
+]);
+

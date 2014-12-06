@@ -15,12 +15,6 @@ bildServices.factory('Projects', ['$resource',
   }
 ]);
 
-bildServices.factory('Test', ['$resource', 
-  function($resource) {
-    return $resource('/data/test.json');
-  }
-]);
-
 bildServices.factory('Companies', ['$resource',
   function($resource){
     return $resource('data/companies.json', {}, {
@@ -32,40 +26,45 @@ bildServices.factory('Companies', ['$resource',
   }
 ]);
 
+bildServices.factory('SmallBusiness', ['$resource',
+  function($resource){
+    return $resource('data/small-business-example.json', {}, {
+      query: { 
+        method:'GET', 
+        isArray : false 
+      }
+    });
+  }
+]);
+
 bildServices.factory('NewProjectService', 
 	function() {
 		var project = {};
-
 		var setProject = function(data) {
 			project = data;
 		}
-
 		var getProject = function(){
       		return project;
-  		}
-
-	    return {
-		    set: setProject,
-		    get: getProject
-	  	}
+  	}
+    return {
+	    set: setProject,
+	    get: getProject
+  	}
 	}
 );
 
 bildServices.factory('NewFirmService', 
   function() {
     var firm = {};
-
     var setFirm = function(data) {
       firm = data;
     }
-
     var getFirm = function(){
           return firm;
-      }
-
-      return {
-        set: setFirm,
-        get: getFirm
-      }
+    }
+    return {
+      set: setFirm,
+      get: getFirm
+    }
   }
 );

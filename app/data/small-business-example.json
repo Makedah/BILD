@@ -1,0 +1,43 @@
+{
+	"name": "KEITH SETTLE & COMPANY",
+	"contact": {
+		"name": "Keith Settle",
+		"title": "General Manager",
+		"office-phone": "818-707-1981",
+		"mobile-phone": "818-707-1981",
+		"email": "keith@dock.net"
+	},
+	"facebook": "",
+	"twitter": "",
+	"website": "",
+	"location": {
+			"street": "4967 VEJAR DRIVE",
+			"city": "AGOURA HILLS ",
+			"county": "",
+			"state": "CA",
+			"zipcode": "91301",
+			"multiple": false
+	},
+	"description": "",
+	"year-created": "1995",
+	"year-owned": "1998",
+	"acquisition-method": "Bought Existing Business",
+	"type": "Sole Proprietorship",
+	"size": "11-50 employees",
+	"valuation": "&lt; $100,000",
+	"previous-ownership": "yes",
+	"previous-ownership-description": "",
+	"is-part-time-or-contract": "no",
+	"number-part-time-or-contract-employees": 0,
+	"for-profit": "yes",
+	"citizen": "yes",
+	"resident": "yes",
+	"gender": "male",
+	"minority": "yes",
+	"license": {
+		"number": "0123456789",
+		"type": "RE",
+		"state": "CA",
+		"expiration-date": "2015-01-01"
+	}
+}
