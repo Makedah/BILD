@@ -287,9 +287,9 @@ bildControllers.controller('NewBusinessCtrl', ['$scope', 'NewFirmService',
 
 bildControllers.controller('BusinessProfileCtrl', ['$scope', 'SmallBusiness',
   function($scope, SmallBusiness) {
-    $scope.business = SmallBusiness.query();
+    $scope.firm = SmallBusiness.query();
 
-    $scope.business.$promise.then(function(data) {
+    $scope.firm.$promise.then(function(data) {
        console.log(data);
     });
   }

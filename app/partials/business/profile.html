@@ -3,5 +3,93 @@
 		<div class="col-md-12 text-center">
 			<h2>Small Business Profile</h2>
 		</div>
+		<div class="col-md-4">
+			<h3 style="margin-left: -15px;">Firm Information</h3>
+			<div class="row">
+				<span ng-bind="firm.name"></span>
+			</div>
+			</br>
+			<div class="row">
+				<label><b>Contact Information</b></label></br>
+				<span ng-bind="firm.contact.name"></span>,
+				<span ng-bind="firm.contact.title"></span></br>
+				<span>Office Phone: </span><span ng-bind="firm.contact.officePhone"></span></br>
+				<span>Mobile Phone: </span><span ng-bind="firm.contact.mobilePhone"></span></br>
+				<span>Email: </span><span ng-bind="firm.contact.email"></span>
+			</div>
+			</br>
+			<div class="row">
+				<span><b>Business Category: </b></span>
+				<span ng-bind="firm.type"></span>
+			</div>
+			<div class="row">
+				<span><b>Year Created: </b></span>
+				<span ng-bind="firm.yearCreated"></span>
+			</div>
+			<div class="row">
+				<span><b>License Type: </b></span>
+				<span ng-bind="firm.license.type"></span>
+			</div>
+			<div class="row">
+				<span><b>Company Size: </b></span>
+				<span ng-bind="firm.size"></span>
+			</div>
+			<div class="row">
+				<span><b>Company Valuation: </b></span>
+				<span ng-bind="firm.valuation"></span>
+			</div>
+			<div class="row">
+				<span><b>Ethnicity: </b></span>
+				<span ng-bind="firm.ethnicity"></span>
+			</div>
+			<div class="row">
+				<span><b>Gender: </b></span>
+				<span ng-bind="firm.gender"></span>
+			</div>
+			<div class="row">
+				<span>NAICS Codes (Add, Remove)</span>
+			</div>
+			<div class="row">
+				<span>SIC Codes (Add, Remove)</span>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h3 style="margin-left: -15px;">Service Areas</h3>
+			<div class="row">
+				<span>States</span>
+			</div>
+			<div class="row">
+				<span>Counties</span>
+			</div>
+			<div class="row">
+				<span>Cities</span>
+			</div>
+			<div class="row">
+				<span>Zipcodes</span>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h3 style="margin-left: -15px;">Certifications, Insurance & Bonding</h3>
+			<div class="row">
+				<span>Agency Certification #</span>
+				<span>Expiration Date</span>
+			</div>
+			<div class="row">
+				<span>Agency Certification # 2</span>
+				<span>Expiration Date</span>
+			</div>
+			<div class="row">
+				<span>Insurance Company Name, Address</span>
+			</div>
+			<div class="row">
+				<span>Insurance Company Contact Info</span>
+			</div>
+			<div class="row">
+				<span>Insurance</span>
+			</div>
+			<div class="row">
+				<span>Bonding</span>
+			</div>
+		</div>
 	</div>
 </div>
