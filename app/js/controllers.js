@@ -295,6 +295,18 @@ bildControllers.controller('BusinessProfileCtrl', ['$scope', 'SmallBusiness', 'S
     $scope.projects.$promise.then(function(data) {
        console.log(data);
     });
+
+    $scope.addProject = function() {
+      window.location.href = '/app/#/business/projects';
+    };
+  }
+]);
+
+bildControllers.controller('BusinessProjectsCtrl', ['$scope',
+  function($scope) {
+
+    
+
   }
 ]);
 
