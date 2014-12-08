@@ -285,13 +285,18 @@ bildControllers.controller('NewBusinessCtrl', ['$scope', 'NewFirmService',
   }
 ]);
 
-bildControllers.controller('BusinessProfileCtrl', ['$scope', 'SmallBusiness',
-  function($scope, SmallBusiness) {
+bildControllers.controller('BusinessProfileCtrl', ['$scope', 'SmallBusiness', 'SmallBusinessProjects',
+  function($scope, SmallBusiness, SmallBusinessProjects) {
     $scope.firm = SmallBusiness.query();
-
     $scope.firm.$promise.then(function(data) {
+       console.log(data);
+    });
+    $scope.projects = SmallBusinessProjects.query();
+    $scope.projects.$promise.then(function(data) {
        console.log(data);
     });
   }
 ]);
+
+
 

@@ -37,6 +37,18 @@ bildServices.factory('SmallBusiness', ['$resource',
   }
 ]);
 
+bildServices.factory('SmallBusinessProjects', ['$resource',
+  function($resource){
+    return $resource('data/small-business-projects-example.json', {}, {
+      query: { 
+        method:'GET', 
+        isArray : true 
+      }
+    });
+  }
+]);
+
+
 bildServices.factory('NewProjectService', 
 	function() {
 		var project = {};

@@ -17,8 +17,54 @@
 				<span>Mobile Phone: </span><span ng-bind="firm.contact.mobilePhone"></span></br>
 				<span>Email: </span><span ng-bind="firm.contact.email"></span>
 			</div>
-			</br>
+		</div>
+		<div class="col-md-4">
+			<h3 style="margin-left: -15px;">Service Areas</h3>
 			<div class="row">
+				<span>States</span>
+			</div>
+			<div class="row">
+				<span>Counties</span>
+			</div>
+			<div class="row">
+				<span>Cities</span>
+			</div>
+			<div class="row">
+				<span>Zipcodes</span>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h3 style="margin-left: -15px;">Certifications, Insurance & Bonding</h3>
+			<div class="row">
+				<span><b>Agency Certification #: </b></span>
+				<span ng-bind="firm.license.number"></span>
+			</div>
+			<div class="row">
+				<span><b>Expiration Date: </b></span>
+				<span ng-bind="firm.license.expirationDate"></span>
+			</div>
+			<!-- <div class="row">
+				<span>Agency Certification # 2</span>
+				<span>Expiration Date</span>
+			</div> -->
+			<div class="row">
+				<span>Insurance Company Name, Address</span>
+			</div>
+			<div class="row">
+				<span>Insurance Company Contact Info</span>
+			</div>
+			<div class="row">
+				<span>Insurance</span>
+			</div>
+			<div class="row">
+				<span>Bonding</span>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="row">
+				</br>
 				<span><b>Business Category: </b></span>
 				<span ng-bind="firm.type"></span>
 			</div>
@@ -53,43 +99,35 @@
 				<span>SIC Codes (Add, Remove)</span>
 			</div>
 		</div>
-		<div class="col-md-4">
-			<h3 style="margin-left: -15px;">Service Areas</h3>
-			<div class="row">
-				<span>States</span>
-			</div>
-			<div class="row">
-				<span>Counties</span>
-			</div>
-			<div class="row">
-				<span>Cities</span>
-			</div>
-			<div class="row">
-				<span>Zipcodes</span>
-			</div>
+		<div class="col-md-8">
+			<h4>Featured Projects</h4>
+			<table class="table table-bordered">
+			    <tbody>
+			        <tr ng-repeat="project in projects">
+			        	<td>
+			        		<div class="col-md-2">
+			        			<img src="{{project.image}}" style="width:100px;">
+			        		</div>
+				            <div class="col-md-10">
+				            	<b><span ng-bind="project.name"></span></b></br>
+				            	<span ng-bind="project.location.city"></span>,
+				            	<span ng-bind="project.location.state"></span></br>
+				            	<b>Start Date:</b> <span ng-bind="project.startDate"></span></br>
+				            	<b>Duration:</b> <span ng-bind="project.duration"></span></br>
+				            	<b>Scope of Work:</b> <span ng-bind="project.scopeOfWork"></span></br>
+				            	<b>Overall Project Value:</b> $<span ng-bind="project.value"></span></br>
+				            	<b>Value of Contracted Service:</b> $<span ng-bind="project.valueOfContractedService"></span></br>
+				            	<b>Team Size:</b> <span ng-bind="project.teamSize"></span> people</br>
+				            	<b>References:</b>
+				            	<div ng-repeat="reference in project.references">
+				            		<span ng-bind="reference.name"></span>
+				            		<span ng-bind="reference.phone"></span>
+				            	</div>
+				            </div>
+				        </td>
+			        </tr>
+			    </tbody>
+			</table>
 		</div>
-		<div class="col-md-4">
-			<h3 style="margin-left: -15px;">Certifications, Insurance & Bonding</h3>
-			<div class="row">
-				<span>Agency Certification #</span>
-				<span>Expiration Date</span>
-			</div>
-			<div class="row">
-				<span>Agency Certification # 2</span>
-				<span>Expiration Date</span>
-			</div>
-			<div class="row">
-				<span>Insurance Company Name, Address</span>
-			</div>
-			<div class="row">
-				<span>Insurance Company Contact Info</span>
-			</div>
-			<div class="row">
-				<span>Insurance</span>
-			</div>
-			<div class="row">
-				<span>Bonding</span>
-			</div>
-		</div>
-	</div>
+	</div>	
 </div>

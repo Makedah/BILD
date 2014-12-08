@@ -1,0 +1,56 @@
+[
+	{
+		"id": "1",
+		"company": "KEITH SETTLE & COMPANY",
+		"name": "Featured Project #1",
+		"image": "img/ProjectPhotoPlaceholder.png",
+		"location": {
+			"city": "San Francisco",
+			"state": "CA",
+			"zipcode": "94102"
+		},
+		"startDate": "2015-02-01",
+		"duration": "3 months",
+		"scopeOfWork": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"value": 10000,
+		"valueOfContractedService": 2000,
+		"teamSize": 5,
+		"references": [
+			{
+				"name": "John Smith",
+				"phone": "888-012-3456"
+			},
+			{
+				"name": "Ann Smith",
+				"phone": "888-012-3457"
+			}
+		]
+	},
+	{
+		"id": "2",
+		"company": "KEITH SETTLE & COMPANY",
+		"name": "Featured Project #2",
+		"image": "img/ProjectPhotoPlaceholder.png",
+		"location": {
+			"city": "San Mateo",
+			"state": "CA",
+			"zipcode": "94002"
+		},
+		"startDate": "2015-03-14",
+		"duration": "1 year",
+		"scopeOfWork": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"value": 100000,
+		"valueOfContractedService": 25000,
+		"teamSize": 7,
+		"references": [
+			{
+				"name": "John Smith",
+				"phone": "888-012-3456"
+			},
+			{
+				"name": "Ann Smith",
+				"phone": "888-012-3457"
+			}
+		]
+	}		
+]

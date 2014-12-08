@@ -39,6 +39,6 @@
 		"number": "0123456789",
 		"type": "RE",
 		"state": "CA",
-		"expiration-date": "2015-01-01"
+		"expirationDate": "2015-01-01"
 	}
 }
