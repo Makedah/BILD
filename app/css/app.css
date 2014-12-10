@@ -108,22 +108,14 @@ h2 {
   margin: 80px 0;
 }
 
-.subtitle {
-  /*text-shadow: 2px 2px 0px black;*/
-}
-
-a.morelink {
+a.morelink, a.lesslink {
   text-decoration:none;
   outline: none;
   color: #2EB82E; 
 }
 
-a.morelink:hover {
+a.morelink:hover, a.lesslink:hover {
   color: #208120;
-}
-
-.morecontent span {
-  display: none;
 }
 
 .comment {

@@ -185,38 +185,27 @@ bildControllers.controller('CorporationsCtrl', ['$scope',
   function($scope) {
     $(document).ready(function() {
 
-      var showChar = 200;
-      var ellipsestext = "";
-      var moretext = "more";
-      var lesstext = "less";
-
-      $('.more').each(function() {
-        var content = $(this).html();
-        var br = content.split('<br>',1).toString();
-        showChar = br.length;
-
-        if(content.length > showChar) {
-
-          var c = content.substr(0, showChar);
-          var h = content.substr(showChar, content.length - showChar);
-
-          var html = c + '<span class="moreelipses">'+ellipsestext+'</span>&nbsp;<span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">'+moretext+'</a></span>';
-
-          $(this).html(html);
+      var sublists = $(".sublist");
+      $(".morelink").click(function() {
+        for (var i=0; i < sublists.length; i++) {
+          if ($(".sublist")[i].style.display == "none") {
+            $(".sublist")[i].style.display = "block";
+          }
         }
+
+        $(".morelink")[0].style.display = "none";
+        $(".lesslink")[0].style.display = "block";
+        
       });
 
-      $(".morelink").click(function(){
-        if($(this).hasClass("less")) {
-          $(this).removeClass("less");
-          $(this).html(moretext);
-        } else {
-          $(this).addClass("less");
-          $(this).html(lesstext);
+      $(".lesslink").click(function() {
+        for (var i=0; i < sublists.length; i++) {
+          if ($(".sublist")[i].style.display == "block") {
+            $(".sublist")[i].style.display = "none";
+          }
         }
-        $(this).parent().prev().toggle();
-        $(this).prev().toggle();
-        return false;
+        $(".morelink")[0].style.display = "block";
+        $(".lesslink")[0].style.display = "none";
       });
     });
   }
@@ -305,7 +294,7 @@ bildControllers.controller('BusinessProfileCtrl', ['$scope', 'SmallBusiness', 'S
 bildControllers.controller('BusinessProjectsCtrl', ['$scope',
   function($scope) {
 
-    
+
 
   }
 ]);
