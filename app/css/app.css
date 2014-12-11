@@ -49,20 +49,21 @@ body > .view-container {
   width: 100%;
   height: auto;
 }
-
 .banner > img {
   width: 100%;
   height: auto;
 }
-
 h1 {
   font-size: 50px;
 }
-
-/*h3 {
-  padding: 30px 0px 20px 30px;
-}*/
-
+#home-caption-top {
+  color: #3399FF; /* Sky blue */
+  text-shadow: 1px 1px 1px black;
+}
+#home-caption-bottom {
+  color: #69A3DD; /* Lighter blue */
+  text-shadow: 1px 1px 1px black;
+}
 .featurette {
   margin-top: 30px;
   padding-left: 30px;
