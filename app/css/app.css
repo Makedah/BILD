@@ -251,10 +251,8 @@ body {
 }
 
 #corporations-caption {
-  background-color: rgba(224,224,224,0.7);
-  border-radius: 15px;
-  color: rgb(64,64,64);
-  text-shadow: none;
+  color: orange;
+  text-shadow: 1px 1px 1px black;
 }
 /* Declare heights because of positioning of img element */
 .carousel .item {
@@ -273,7 +271,7 @@ body {
   border: 1px solid rgb(64,64,64);
 }
 .carousel-indicators .active {
-  background-color: #777;
+  background-color: orange;
 }
 
 /* RESPONSIVE CSS
