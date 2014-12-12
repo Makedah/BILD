@@ -1,65 +1,87 @@
-<div ng-controller="ProjectDetailsCtrl">
-	<h3 class="welcome">Project Details</h3>
-	<div id="top">
-		<div class="col-md-3" ng-if="project.files.length == 0">
-			<img src="img/ProjectPhotoPlaceholder.png" style="width:75%;">
-		</div>
-		<div class="col-md-3" ng-if="project.files.length != 0">
-			<img src={{project.files[0].name}} style="width:75%;">
-		</div>
-		<div class="col-md-3">
-			<label for="projectName">Name: </label>
-		    <span ng-bind="project.name"></span></br>
-		    <label for="projectBidPackages">Project Bid Packages</label>
-		    <table class="table" id="packages-table">
-			    <tbody>
-			        <tr ng-repeat="package in project.bidPackages">
-			            <td><span ng-bind="package.name"></span></td>
-			            <td>$<span ng-bind="package.value"></span></td>
-			        </tr>
-			    </tbody>
-			</table>
-			<label for="projectName">Number of bid packages: </label>
-		    <span>{{bidPackagesCount}}</span>
-		</div>
-		<div class="col-md-3">
-			<label for="projectValue">Overall Project Value: </label>
-		    $ <span ng-bind="project.value"></span>.00
-		    <label for="projectBidValue">Bid Project Value: </label>
-		    $ <span ng-bind="project.bidValue"></span>.00
-		    <label for="projectDuraction">Project Duration: </label>
-		    <span ng-bind="project.duration"></span>
-		    <span ng-bind="project.durationUnits"></span></br>
-		    <label for="projectLocation">Project Location: </label>
-		    <span ng-bind="project.location.city"></span>
-		    <span ng-bind="project.location.state"></span>
-		    <span ng-bind="project.location.zipcode"></span>
-		</div>
-		<div class="col-md-3">
-			<label for="projectGoal">SBE/DBE Goal: </label>
-			<div class="bar" style="width: {{project.goalPercentage}}%">{{project.goalPercentage}}%</div>
-		    <label for="projectUsers">Company Contact Information</label>
-		    <table class="table">
-			    <tbody>
-			        <tr ng-repeat="user in project.users">
-			            <td><span ng-bind="user.name"></span></td>
-			            <td><span ng-bind="user.position"></span></td>
-			            <td><span ng-bind="user.phone"></span></td>
-			            <td><span ng-bind="user.email"></span></td>
-			        </tr>
-			    </tbody>
-			</table>
+<div class="container-fluid">
+	<div class="row" ng-controller="ProjectDetailsCtrl">
+		<h3 class="welcome">Project Details</h3>
+		<div id="top">
+			<div class="col-md-4" ng-if="project.files.length == 0">
+				<img src="img/ProjectPhotoPlaceholder.png" style="width:75%;">
+			</div>
+			<div class="col-md-4" ng-if="project.files.length != 0">
+				<img src={{project.files[0].name}} style="width:75%;">
+			</div>
+			<div class="col-md-5">
+				<div class="row">
+					<label for="projectName">Name: </label>
+			    	<span ng-bind="project.name"></span>
+			    </div>
+			    <div class="row">
+			    	<label for="projectBidPackages">Project Bid Packages</label>
+				    <table class="table" id="packages-table">
+					    <tbody>
+					    	<tr>
+					    		<th class="table-input-row">Name</th>
+								<th class="table-input-row">Value $</th>
+								<th class="table-input-row">SBE/DBE Goal %</th>
+							</tr>
+					        <tr ng-repeat="package in project.bidPackages">
+					            <td><span ng-bind="package.name"></span></td>
+					            <td>$<span ng-bind="package.value"></span></td>
+					            <td><span ng-bind="package.goal"></span>%</td>
+					        </tr>
+					    </tbody>
+					</table>
+				</div>
+				<div class="row">
+					<label for="projectName">Number of bid packages: </label>
+			    	<span>{{bidPackagesCount}}</span>
+				</div>
+				<div class="row">
+					<label for="projectValue">Overall Project Value: </label>
+			    	$ <span ng-bind="project.value"></span>.00
+			    </div>
+			    <div class="row">
+			    	<label for="projectBidValue">Bid Project Value: </label>
+			    	$ <span ng-bind="project.bidValue"></span>.00
+			    </div>
+			    <div class="row">
+			    	<label for="projectDuraction">Project Duration: </label>
+			    	<span ng-bind="project.duration"></span>
+			    	<span ng-bind="project.durationUnits"></span></br>
+			    </div>
+			    <div class="row">
+			    	<label for="projectLocation">Project Location: </label>
+			    	<span ng-bind="project.location.city"></span>
+			    	<span ng-bind="project.location.state"></span>
+			    	<span ng-bind="project.location.zipcode"></span>
+			    </div>
+			</div>
+			<div class="col-md-3">
+				<label for="projectGoal">SBE/DBE Goal: </label>
+				<div class="bar" style="width: {{project.goalPercentage}}%">{{project.goalPercentage}}%</div>
+			    <label for="projectUsers">Company Contact Information</label>
+			    <table class="table">
+				    <tbody>
+				        <tr ng-repeat="user in project.users">
+				            <td><span ng-bind="user.name"></span></td>
+				            <td><span ng-bind="user.position"></span></td>
+				            <td><span ng-bind="user.phone"></span></td>
+				            <td><span ng-bind="user.email"></span></td>
+				        </tr>
+				    </tbody>
+				</table>
+			</div>
 		</div>
 	</div>
-	<div id="bottom">
-		<ul class="nav nav-tabs" role="tablist">
-		  <li role="presentation" class="active"><a ui-sref="tasks">Tasks</a></li>
-		  <li role="presentation"><a ui-sref="bids">Bids</a></li>
-		  <li role="presentation"><a ui-sref="messages">Messages</a></li>
-		  <li role="presentation"><a ui-sref="media">Media</a></li>
-		  <li role="presentation"><a ui-sref="library">Library</a></li>
-		</ul>
-	    <div ui-view></div>
+	<div class="row">
+		<div id="bottom">
+			<ul class="nav nav-tabs" role="tablist">
+			  <li role="presentation" class="active"><a ui-sref="tasks">Tasks</a></li>
+			  <li role="presentation"><a ui-sref="bids">Bids</a></li>
+			  <li role="presentation"><a ui-sref="messages">Messages</a></li>
+			  <li role="presentation"><a ui-sref="media">Media</a></li>
+			  <li role="presentation"><a ui-sref="library">Library</a></li>
+			</ul>
+			<div ui-view></div>
+		</div>
 	</div>
 </div>
 

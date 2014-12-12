@@ -5,11 +5,13 @@
 		"bidPackages": [ 
 			{
 				"name": "bid package name 1",
-				"value": 1000
+				"value": 1000,
+				"goal": 10
 			},
 			{
 				"name": "bid package name 2",
-				"value": 5000
+				"value": 5000,
+				"goal": 13
 			}
 		],
 		"location" : {
@@ -49,7 +51,8 @@
 		"bidPackages": [
 			{
 				"name": "test bid package name",
-				"value": 70000
+				"value": 70000,
+				"goal": 4.5
 			}
 		],
 		"location" : {
@@ -95,23 +98,28 @@
 		"bidPackages" : [
 			{
 				"name": "test bid 1",
-				"value": 1000
+				"value": 1000,
+				"goal": 10
 			},
 			{
 				"name": "test bid 2",
-				"value": 1000
+				"value": 1000,
+				"goal": 3.6
 			},
 			{
 				"name": "test bid 3",
-				"value": 1000
+				"value": 1000,
+				"goal": 1.5
 			},
 			{
 				"name": "test bid 4",
-				"value": 1000
+				"value": 1000,
+				"goal": 5
 			},
 			{
 				"name": "test bid 5",
-				"value": 1000
+				"value": 1000,
+				"goal": 25
 			}
 		],
 		"location" : {

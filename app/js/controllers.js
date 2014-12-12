@@ -313,7 +313,12 @@ bildControllers.controller('CalculatorCtrl', ['$scope', 'Projects',
       console.log(project);
 
       $scope.goalAmount = project.value * project.goalPercentage / 100;
-      $scope.bidGoalAmount = project.bidValue * project.goalPercentage / 100;
+      $scope.bidGoalPercentage = 0;
+      for (var i = 0; i < project.bidPackages.length; i++) {
+         $scope.bidGoalPercentage += project.bidPackages[i].goal;
+      }
+
+      $scope.bidGoalAmount = project.bidValue * $scope.bidGoalPercentage / 100;
       
     }
   }

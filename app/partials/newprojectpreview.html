@@ -15,10 +15,12 @@
 				<tr>
 					<th class="table-input-row">Name</th>
 					<th class="table-input-row">Value</th>
+					<th class="table-input-row">SBE/DBE Goal</th>
 				</tr>
 				<tr ng-repeat="bidPackage in project.bidPackages">
 				  <td><span ng-bind="bidPackage.name"></span></td>
 				  <td>$<span ng-bind="bidPackage.value"></span></td>
+				  <td><span ng-bind="bidPackage.goal"></span>%</td>
 				</tr>
 			</table>
 		</div>
