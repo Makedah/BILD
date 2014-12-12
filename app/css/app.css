@@ -263,6 +263,7 @@ body {
 .carousel-indicators .active {
   background-color: #777;
 }
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -292,6 +293,33 @@ body {
 }
 #projects-section {
   margin-top: -25px;
+}
+
+#hammer {
+  height: 40px;
+}
+#search-glass {
+  height: 40px;
+}
+#search-nav {
+  height:30px;
+  margin-top:50px;
+  background-color:lightgray;
+}
+.sub-nav li > a {
+  padding-top: 6px;
+  height: 30px;
+  color: green;
+}
+
+.sub-nav li.active > a {
+  color: black;
+}
+
+.sub-nav li > a:hover {
+  text-decoration: none;
+  background-color: lightgray;
+  color: black;
 }
 
 /************* Navigation Menu ************/
@@ -370,7 +398,6 @@ td:hover {
   height: auto;
 }
 #packages-table {
-  /*max-height: 100px;*/
   overflow-y: scroll;
   display: block;
   overflow: scroll;
@@ -441,6 +468,7 @@ label {
 
 .search-filters {
   margin-left: 10px;
+  margin-top: 60px;
 }
 
 .long-field-select {
