@@ -45,6 +45,9 @@ bildApp.config(['$routeProvider',
       when('/search', {
         templateUrl: 'partials/search.html'
       }).
+      when('/calculator', {
+        templateUrl: 'partials/calculator.html'
+      }).
       when('/business', {
         templateUrl: 'partials/business.html'
       }).

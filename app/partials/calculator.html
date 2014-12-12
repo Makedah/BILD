@@ -1,0 +1,47 @@
+<nav class="navbar-fixed-top" role="navigation" id="search-nav">
+ 	<div class="container">
+  		<div class="collapse navbar-collapse" id="projects-navigation">
+      		<ul class="nav navbar-nav sub-nav">
+        		<li><a href="#search">SBE/DBE Search</a></li>
+        		<li><a href="#">Post Project Bid Invitation</a></li>
+        		<li class="active"><a href="#calculator">SBE/DBE Calculator</a></li>
+        		<li><a href="#">Schedule Communication</a></li>
+        		<li><a href="#">Reports</a></li>
+        		<li><a href="#">Blog</a></li>
+      		</ul>
+  		</div>
+	</div>
+</nav>
+<div class="container" id="calculator-container" ng-controller="CalculatorCtrl">
+	<div class="col-md-12 text-center">
+		<h2>Select a project: </h2>
+		<select ng-model="project" ng-change="selectProject()" data-ng-options="project as project.name for project in projects">
+    		<option value="">Select Project</option>
+		</select>
+	</div>
+	<div class="col-md-8">
+		<h3>Project Goals</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<label>Overall Project SBE/DBE Goal: </label>
+				<span ng-bind="project.goalPercentage"></span>%
+			</div>
+			<div class="col-md-6">
+				<label>Goal Amount: </label>
+				$<span ng-bind="goalAmount"></span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<label>Overall Bid Package SBE/DBE Goal: <label>
+			</div>
+			<div class="col-md-6">
+				<label>Goal Amount: </label>
+				$<span ng-bind="bidGoalAmount"></span>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<h3>Counters</h3>
+	</div>
+</div>

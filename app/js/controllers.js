@@ -299,5 +299,23 @@ bildControllers.controller('BusinessProjectsCtrl', ['$scope',
   }
 ]);
 
+bildControllers.controller('CalculatorCtrl', ['$scope', 'Projects',
+  function($scope, Projects) {
+    $scope.projects = Projects.query();
+    $scope.goalAmount = 0;
+    $scope.bidGoalAmount = 0;
 
+    $scope.projects.$promise.then(function(data) {
+        console.log($scope.projects);
+    });
+    $scope.selectProject = function() {
+      var project = $scope.project;
+      console.log(project);
+
+      $scope.goalAmount = project.value * project.goalPercentage / 100;
+      $scope.bidGoalAmount = project.bidValue * project.goalPercentage / 100;
+      
+    }
+  }
+]);
 

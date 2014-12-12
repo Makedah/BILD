@@ -322,6 +322,11 @@ body {
   color: black;
 }
 
+/************** Calculator ****************/
+#calculator-container {
+  margin-top: 40px;
+}
+
 /************* Navigation Menu ************/
 
 .nav-stacked > li {
