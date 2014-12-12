@@ -43,7 +43,8 @@
 				"name": "img/facebook-19.png"
 			}
 		],
-		"createdAt" : "2014-11-01T21:35:43+0000"
+		"createdAt" : "2014-11-01T21:35:43+0000",
+		"startDate": "2015-02-01"
 	},
 	{
 		"id" : "test-project-2",
@@ -53,6 +54,11 @@
 				"name": "test bid package name",
 				"value": 70000,
 				"goal": 4.5
+			},
+			{
+				"name": "test bid package 2",
+				"value": 50000,
+				"goal": 15
 			}
 		],
 		"location" : {
@@ -90,7 +96,8 @@
 				"name": "img/apple-hq15.jpg"
 			}
 		],
-		"createdAt" : "2014-11-11T01:10:05+0000"
+		"createdAt" : "2014-11-11T01:10:05+0000",
+		"startDate": "2015-03-14"
 	},
 	{
 		"id" : "test-project-3",
@@ -143,6 +150,7 @@
 		"files" : [
 			
 		],
-		"createdAt" : "2014-11-12T01:31:07+0000"
+		"createdAt" : "2014-11-12T01:31:07+0000",
+		"startDate": "2016-01-31"
 	}
 ]

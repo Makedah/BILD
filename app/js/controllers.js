@@ -302,24 +302,31 @@ bildControllers.controller('BusinessProjectsCtrl', ['$scope',
 bildControllers.controller('CalculatorCtrl', ['$scope', 'Projects',
   function($scope, Projects) {
     $scope.projects = Projects.query();
-    $scope.goalAmount = 0;
-    $scope.bidGoalAmount = 0;
-
+  
     $scope.projects.$promise.then(function(data) {
         console.log($scope.projects);
     });
+    
     $scope.selectProject = function() {
+      $scope.bidGoalAmount = 0;
+      $scope.bidGoalPercentage = 0;
+      $scope.daysRemaining = 0;
+      $scope.goalAmount = 0;
+
       var project = $scope.project;
       console.log(project);
 
       $scope.goalAmount = project.value * project.goalPercentage / 100;
-      $scope.bidGoalPercentage = 0;
       for (var i = 0; i < project.bidPackages.length; i++) {
          $scope.bidGoalPercentage += project.bidPackages[i].goal;
       }
 
       $scope.bidGoalAmount = project.bidValue * $scope.bidGoalPercentage / 100;
-      
+      var now = new Date();
+      var startDate = new Date(project.startDate);
+      var timeDiff = Math.abs(startDate.getTime() - now.getTime());
+      $scope.daysRemaining = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+
     }
   }
 ]);
