@@ -336,7 +336,9 @@ body {
 #calculator-container {
   margin-top: 40px;
 }
-
+.text-bigger {
+  font-size:19px;
+}
 /************* Navigation Menu ************/
 
 .nav-stacked > li {

@@ -22,83 +22,101 @@
 	<div class="col-md-12">
 		<div class="col-md-8">
 			<h3>Project Goals</h3>
-			<div class="row">
-				<div class="col-md-6">
-					<label>Overall Project SBE/DBE Goal: </label>
-					<span ng-bind="project.goalPercentage"></span>%
-				</div>
-				<div class="col-md-6">
-					<label>Goal Amount: </label>
-					$<span ng-bind="goalAmount"></span>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<label>Overall Bid Package SBE/DBE Goal: </label>
-					<span ng-bind="bidGoalPercentage"></span>%
-				</div>
-				<div class="col-md-6">
-					<label>Goal Amount: </label>
-					$<span ng-bind="bidGoalAmount"></span>
-				</div>
-			</div>
-			<h3>Project Bids</h3>
-			<div class="col-md-12">
-			<div class="row">
-				<label>Current Running Estimate Based on Received Bids: </label>
-				$<span ng-bind="project.bidValue"></span>
-			</div>
-			<div class="row">
-				<label>Current Actual Total Based on Confirmed Subcontractor Bids: </label>
-				<div class="input-group" id="input-field">
-				    <span class="input-group-addon">$</span>
-				    <input type="number" class="form-control" ng-model="actualBidValue">
-				    <span class="input-group-addon">.00</span>
-				</div>
-			</div>
-			<div class="row">
-				<label>Current Number of Bids: </label>
-				<span></span>
-			</div>
-			<div class="row">
-				<label>Total Number of Bids (Overall Project): </label>
-				<span ng-bind="project.bidPackages.length"></span>
-			</div>
-			<div class="row">
-				<label>Number of Bids by Women-Owned Business: </label>
-				<span></span>
-			</div>
-			<div class="row">
-				<label>Number of Bids by Minority-Owned Business: </label>
-				<span></span>
-			</div>
-			<div class="row">
-				<label>Number of Bids by Disabled Veteran-Owned Business: </label>
-				<span></span>
-			</div>
-			<div class="row">
-				<label>Number of Bids by LGBT-Owned Business: </label>
-				<span></span>
-			</div>
-			</div>
 		</div>
 		<div class="col-md-4">
 			<h3>Counters</h3>
-			<div class="row">
-				<span><b>SBE/DBE achieved to date:</b></span>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="row text-bigger">
+			<span>Overall Project SBE/DBE Goal: </span>
+			<b><span ng-bind="project.goalPercentage"></span>%</b>
+		</div>
+		</br></br></br></br>
+		<div class="row text-bigger">
+			<span>Overall Bid Package SBE/DBE Goal: </span>
+			<b><span ng-bind="bidGoalPercentage"></span>%</b>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="row text-bigger">
+			<span>Goal Amount: </span>
+			<b>$<span ng-bind="goalAmount"></span></b>
+		</div>
+		</br></br></br></br>
+		<div class="row text-bigger">
+			<span>Goal Amount: </span>
+			<b>$<span ng-bind="bidGoalAmount"></span></b>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="row text-bigger">
+			<span>SBE/DBE achieved to date:</span>
+			<div class="bar" style="width: {{project.goalPercentage}}%">{{project.goalPercentage}}%</div>
+		</div>
+		<div class="row text-bigger">
+			<span>Days remaining: <b>{{daysRemaining}}</b></span>
+		</div>
+		</br>
+		<div class="row text-bigger">
+			<span>SBE/DBE achieved to date:</span>
+			<div class="bar" style="width: {{bidGoalPercentage}}%">{{bidGoalPercentage}}%</div>
+		</div>
+		<div class="row text-bigger">
+			<span>Days remaining: <b>{{daysRemaining}}</b></span>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-8">
+			<h3>Bids</h3>
+			<div class="row text-bigger">
+				<span>Current Running Estimate Based on Received Bids: </span>
+				<b>$<span ng-bind="project.bidValue"></span></b>
 			</div>
-			<div class="row">
-				<div class="bar" style="width: {{project.goalPercentage}}%">{{project.goalPercentage}}%</div>
+			<div class="row text-bigger">
+				<span>Current Actual Total Based on Confirmed Subcontractor Bids: </span>
+				<b>$<span></span></b>
 			</div>
-			<div class="row">
-				<span><b>SBE/DBE achieved to date:</b></span>
-			</div>
-			<div class="row">
-				<div class="bar" style="width: {{bidGoalPercentage}}%">{{bidGoalPercentage}}%</div>
-			</div>
-			<div class="row">
-				<span><b>Days remaining:</b> {{daysRemaining}}</span>
-			</div>
+			</br>
+			</br>
+			<table class="table table-bordered" style="width:100%;margin-left:-20px;">
+				<thead>
+			        <tr>
+			        	<th></th>
+			            <th>Current Number of Bids</th>
+			            <th>Total Number of Bids (Overall Project)</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			        	<td>Number of Bids by Small Business (all)</td>
+			        	<td><b><span ng-bind="project.bidPackages.length"></span></b></td>
+			        	<td>0</td>
+			        </tr>
+			        <tr>
+			        	<td>Number of Bids by Women-Owned Business</td>
+			        	<td>0</td>
+			        	<td>0</td>
+			        </tr>
+			        <tr>
+			        	<td>Number of Bids by Minority-Owned Business</td>
+			        	<td>0</td>
+			        	<td>0</td>
+			        </tr>
+			        <tr>
+			        	<td>Number of Bids by Disabled Veteran-Owned Business</td>
+			        	<td>0</td>
+			        	<td>0</td>
+			        </tr>
+			        <tr>
+			        	<td>Number of Bids by LGBT-Owned Business</td>
+			        	<td>0</td>
+			        	<td>0</td>
+			        </tr>
+			    </tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
 			<h3>Year-To-Date</h3>
 			<div class="row">
 				<span><b>% of companies by Women</b></span>
