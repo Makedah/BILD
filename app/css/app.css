@@ -57,19 +57,20 @@ h1 {
   font-size: 50px;
 }
 #home-caption-top {
-  color: #3399FF; /* Sky blue */
+  color: orange; 
   text-shadow: 1px 1px 1px black;
+  font-size: 43px;
 }
 #home-caption-bottom {
-  color: #69A3DD; /* Lighter blue */
+  color: #00CFCF; 
   text-shadow: 1px 1px 1px black;
+  font-size: 42px;
 }
 .featurette {
   margin-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
 }
-
 .featurette-heading {
   text-align: center;
   margin-bottom: 40px;
@@ -85,6 +86,17 @@ h1 {
 
 .lead-muted {
   color: #777;
+}
+
+i.fa.fa-circle {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.carousel-caption {
+  right: 20%;
+  left: 20%;
+  padding-bottom: 60px;
 }
 
 /************** Corporations ***************/
