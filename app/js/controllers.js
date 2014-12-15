@@ -291,6 +291,16 @@ bildControllers.controller('BusinessProfileCtrl', ['$scope', 'SmallBusiness', 'S
   }
 ]);
 
+bildControllers.controller('SmallBusinessCtrl', ['$scope',
+  function($scope) {
+    $('.gallery-item').hover( function() {
+      $(this).find('.img-title').fadeIn(300);
+    }, function() {
+        $(this).find('.img-title').fadeOut(100);
+    });
+  }
+]);
+
 bildControllers.controller('BusinessProjectsCtrl', ['$scope',
   function($scope) {
 
@@ -306,7 +316,7 @@ bildControllers.controller('CalculatorCtrl', ['$scope', 'Projects',
     $scope.projects.$promise.then(function(data) {
         console.log($scope.projects);
     });
-    
+
     $scope.selectProject = function() {
       $scope.bidGoalAmount = 0;
       $scope.bidGoalPercentage = 0;
