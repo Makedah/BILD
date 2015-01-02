@@ -239,13 +239,13 @@ bildControllers.controller('AboutUsCtrl', ['$scope', '$state',
 bildControllers.controller('NewBusinessCtrl', ['$scope', 'NewFirmService',
   function($scope, NewFirmService) {
     $scope.firm = NewFirmService.get();
-    $scope.firm.receits = [];    
+    $scope.firm.receipts = [];    
     $scope.firm.officers = [];
     $scope.firm.managers = [];
 
-    $scope.addReceit = function(receit) {
-      $scope.firm.receits.push(receit);
-      $scope.receit = {};
+    $scope.addReceipt = function(receipt) {
+      $scope.firm.receipts.push(receipt);
+      $scope.receipt = {};
     };
 
     $scope.addOfficer = function(officer) {

@@ -332,20 +332,20 @@
 		    	<table>
 					<tr>
 						<th class="table-input-row">Year</th>
-						<th class="table-input-row">Total Receits</th>
+						<th class="table-input-row">Total Receipts</th>
 					</tr>
-					<tr ng-repeat="receit in firm.receits">
-					  <td><span ng-bind="receit.year"></span></td>
-					  <td>$<span ng-bind="receit.total"></span></td>
+					<tr ng-repeat="receipt in firm.receipts">
+					  <td><span ng-bind="receipt.year"></span></td>
+					  <td>$<span ng-bind="receipt.total"></span></td>
 					</tr>
 				</table>
 			    <table>
 					<tr>
-					  <td><input ng-model="receit.year" placeholder="Year"></td>
-					  <td><input ng-model="receit.total" placeholder="Total Receits" class="table-input-row"></td>
+					  <td><input ng-model="receipt.year" placeholder="Year"></td>
+					  <td><input ng-model="receipt.total" placeholder="Total Receipts" class="table-input-row"></td>
 					</tr>
 					<td colspan="2">
-						<input id="table-button" type="Button" value="Add Receit" ng-click="addReceit(receit)">
+						<input id="table-button" type="Button" value="Add Receipt" ng-click="addReceipt(receipt)">
 					</td>
 				</table>
 		    </div>
