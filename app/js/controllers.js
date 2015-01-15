@@ -213,11 +213,11 @@ bildControllers.controller('CorporationsCtrl', ['$scope',
 
 bildControllers.controller('UserCtrl', ['$scope',
   function($scope) {
-     // if ($scope.user != undefined) {
-      // $scope.user = {};
-      // $scope.user.name = 'Corporation';
-      // $scope.user.logo = 'img/Corporation-logo.png';
-    // }
+     if ($scope.user != undefined) {
+      $scope.user = {};
+      $scope.user.name = 'Corporation';
+      $scope.user.logo = 'img/Corporation-logo.png';
+    }
      $scope.login = function() {
       $scope.user = {};
       $scope.user.name = 'Corporation';
