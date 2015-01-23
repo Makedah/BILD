@@ -23,6 +23,9 @@ bildApp.config(['$routeProvider',
       when('/corporations', {
         templateUrl: 'partials/corporations.html'
       }).
+      when('/login', {
+        templateUrl: 'partials/login.html'
+      }).
       when('/projects', {
         templateUrl: 'partials/projects.html',
          controller: 'ProjectsCtrl'

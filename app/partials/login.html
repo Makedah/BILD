@@ -1,0 +1,31 @@
+<div class="container-fluid">
+	<div class="featurette">
+		<form>
+			<div class="col-md-12" ng-controller="SignUpCtrl">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+					<div class="row text-center">
+						<h2>Sign Up</h2>
+					</div>
+					<div class="row">
+						<div class="col-md-7" id="one-row">
+						    <label for="name">Company name</label>
+						    <input id="input-field" type="text" class="form-control" placeholder="i.e. BILD Corp." ng-model="user.name">
+						</div>
+						<div class="col-md-7" id="one-row">
+						    <label for="email">Email address</label>
+							    <input id="input-field" type="email" class="form-control" placeholder="i.e. mary@bild.com" ng-model="user.email">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 text-center" style="margin-top:2em;">
+						<button type="submit" class="btn btn-primary" ng-click="signup(corporation)">SIGN UP</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

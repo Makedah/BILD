@@ -324,7 +324,6 @@ bildControllers.controller('CalculatorCtrl', ['$scope', 'Projects',
       $scope.goalAmount = 0;
 
       var project = $scope.project;
-      console.log(project);
 
       $scope.goalAmount = project.value * project.goalPercentage / 100;
       for (var i = 0; i < project.bidPackages.length; i++) {
@@ -338,6 +337,20 @@ bildControllers.controller('CalculatorCtrl', ['$scope', 'Projects',
       $scope.daysRemaining = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
 
     }
+  }
+]);
+
+bildControllers.controller('SignUpCtrl', ['$scope',
+  function($scope) {
+      $scope.user = {};
+
+      $scope.signup = function(corporation) {
+      
+          console.log('redirect');
+          window.location.href = '/app/#/projects';
+        
+      }
+    
   }
 ]);
 
